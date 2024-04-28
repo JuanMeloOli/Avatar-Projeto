@@ -4,12 +4,37 @@
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: "Bebas Neue", sans-serif;
+
 }
 
 .home {
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(53, 51, 51, 0.4);
+}
+
+.info-home {
+    color: antiquewhite;
+    position: absolute;
+    /* Posiciona o elemento de forma absoluta */
+    top: 50%;
+    /* Define a distância superior a 50% da altura do contêiner pai */
+    left: 50%;
+    /* Define a distância esquerda a 50% da largura do contêiner pai */
+    transform: translate(-50%, -50%);
+
+}
+
+
+.title-home {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.txt-home {
+    text-align: center;
+    font-size: 2rem;
 }
 
 nav {
@@ -17,42 +42,100 @@ nav {
     width: 100vw;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5.5rem;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
 }
 
 nav a {
     text-decoration: none;
     text-align: center;
-    line-height: 2rem;
-    height: 2rem;
-    width: 6rem;
-    background-color: rgb(236, 137, 0);
+    line-height: 4rem;
+    height: 8vh;
+    width: 8vh;
     overflow-y: hidden;
     color: rgb(0, 0, 0);
-    border-radius: 3px;
+    border-radius: 90px;
+    background-size: cover;
+    transition: 0.7s all;
+}
+
+a:hover {
+    transform: scale(1.15);
+}
+
+.home-button {
+    height: 10vh;
+    width: 4vw;
+    background-image: url(lemo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history-button {
+    height: 5vh;
+    width: 6.5vw;
+    line-height: 5vh;
+    background-color: beige;
+    transition: 1s all;
+}
+
+.history-button:hover {
+    background-color: black;
+    color: bisque;
 }
 
 .fire-button {
-    background-color: #5a0909;
-    color: aliceblue;
+    background-image: url(EmblemaFireNation.webp);
+    border-color: rgb(137, 135, 135);
+}
+
+.fire-button:hover {
+    border: rgb(140, 2, 2) 3px solid;
 }
 
 .water-button {
-    background-color: rgb(8, 218, 226);
+    background-image: url(emblemaWaterNation.png);
+    border-color: rgb(137, 135, 135);
+}
+
+.water-button:hover {
+    border: rgb(10, 13, 158) 3px solid;
 }
 
 .air-button {
-    background-color: blanchedalmond;
-    color: black;
+    background-image: url(emblemaAr.jpg);
+    border-color: rgb(137, 135, 135);
+}
+
+.air-button:hover {
+    border: rgb(0, 0, 0) 3px solid;
 }
 
 .earth-button {
-    background-color: rgb(96, 56, 2);
-    color: rgb(255, 255, 255);
+    background-image: url(emblemaEarthNation.jpg);
+    border-color: rgb(137, 135, 135);
 }
 
+.earth-button:hover {
+    border: rgb(17, 148, 0) 3px solid;
+}
+
+.aboutMe-button {
+    height: 5vh;
+    width: 6.5vw;
+    line-height: 5vh;
+    background-color: beige;
+    transition: 1s all;
+}
+
+.aboutMe-button:hover {
+    background-color: black;
+    color: bisque;
+}
 
 
 
@@ -77,20 +160,23 @@ nav a {
 
 
 
+
+
 .historia {
     padding: 2rem;
     height: 100vh;
     width: 100vw;
     display: flex;
-    background: url(dropAir.jpg);
+    background: burlywood;
     background-position: center;
     background-size: cover;
     color: rgb(255, 255, 255);
+    display: flex;
 }
 
 .txt-historia {
     width: 50vw;
-    border: 0.3rem solid white;
+    border: 0.3rem solid rgb(194, 3, 3);
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 0;
     border-top: 0;
@@ -100,7 +186,124 @@ nav a {
     font-size: 1.2rem;
 }
 
-.background-historia {
+.trailer-history {
     width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.trailer {
+    margin-left: 2rem;
+    width: 45vw;
+    height: 53vh;
+}
+
+.lax {
+    height: 45vh;
+    width: 100vw;
+    background-image: url(irohAndZuko.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+.fire {
+    background-image: url(zuko.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100vw;
+    padding-left: 1rem;
+    display: flex;
+}
+
+.txt-fire {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.zuko-fire {
+    height: 100vh;
+    width: 50vw;
+    background-image: url(zukoSolo.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.txt-fire h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.txt-fire p {
+    font-size: 1.5rem;
+}
+
+.button-entrar {
+    height: 5vh;
+    width: 6vw;
+    line-height: 5vh;
+    background-color: #d10101;
+    color: aliceblue;
+}
+
+
+
+
+.air {
+    background-image: url(aangBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt-air {
+    height: 100vh;
+    width: 50vw;
+}
+
+
+
+
+
+.water {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(kataraBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+.earth {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(tophBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: #d10101;
 }
