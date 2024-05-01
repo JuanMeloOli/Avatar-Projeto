@@ -17,11 +17,8 @@
 .info-home {
     color: antiquewhite;
     position: absolute;
-    /* Posiciona o elemento de forma absoluta */
     top: 50%;
-    /* Define a distância superior a 50% da altura do contêiner pai */
     left: 50%;
-    /* Define a distância esquerda a 50% da largura do contêiner pai */
     transform: translate(-50%, -50%);
 
 }
@@ -47,7 +44,16 @@ nav {
     backdrop-filter: blur(2px);
     position: fixed;
     top: 0;
+    background-color: black;
+    transition: background-color 1.5s ease, backdrop-filter 0.3s ease;
+    z-index: 2;
 }
+
+.scrolled {
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+}
+
 
 nav a {
     text-decoration: none;
@@ -167,7 +173,7 @@ a:hover {
     height: 100vh;
     width: 100vw;
     display: flex;
-    background: burlywood;
+    background-image: url(avatarWallpaper.jpg);
     background-position: center;
     background-size: cover;
     color: rgb(255, 255, 255);
@@ -198,6 +204,17 @@ a:hover {
     margin-left: 2rem;
     width: 45vw;
     height: 53vh;
+    border: #d10101 solid 5px;
+    box-shadow: 1.3rem 1rem 1rem 0.5rem black;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .lax {
@@ -209,6 +226,14 @@ a:hover {
     background-size: cover;
 
 
+}
+
+.um {
+    background-image: url(avataresWallpaper.jpg);
+}
+
+.dois {
+    background-image: url(sunGrupoAvatar.jpeg);
 }
 
 .fire {
