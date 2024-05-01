@@ -11,7 +11,7 @@
 .home {
     height: 100vh;
     width: 100vw;
-    background-color: rgba(53, 51, 51, 0.4);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
 }
 
 .info-home {
@@ -27,6 +27,34 @@
 .title-home {
     text-align: center;
     font-size: 5rem;
+    animation: changeColor 10s forwards infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        color: rgb(255, 252, 252);
+    }
+
+    20% {
+        color: black;
+    }
+
+    40% {
+        color: rgb(255, 252, 252);
+    }
+
+    60% {
+        color: rgb(0, 0, 0);
+    }
+
+    80% {
+        color: rgb(255, 255, 255);
+    }
+
+    100% {
+        color: rgb(0, 0, 0);
+    }
+
 }
 
 .txt-home {
@@ -44,7 +72,7 @@ nav {
     backdrop-filter: blur(2px);
     position: fixed;
     top: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
     transition: background-color 1.5s ease, backdrop-filter 0.3s ease;
     z-index: 2;
 }
@@ -55,10 +83,10 @@ nav {
 }
 
 
-nav a {
+nav .standard {
     text-decoration: none;
     text-align: center;
-    line-height: 4rem;
+    line-height: 8vh;
     height: 8vh;
     width: 8vh;
     overflow-y: hidden;
@@ -144,6 +172,47 @@ a:hover {
 }
 
 
+.register-button {
+    position: relative;
+    overflow: hidden;
+    height: 2.5rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #000000;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    line-height: 2.5rem;
+    text-decoration: none;
+}
+
+.register-button:hover::before {
+    transform: scaleX(1);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+
+.register-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(180deg,
+            rgb(189, 1, 1) 10.8%,
+            rgb(0, 0, 0) 94.3%);
+    transition: all 0.475s;
+}
+
+
 
 .background-home {
     background-image: url(dropAir.jpg);
@@ -190,6 +259,18 @@ a:hover {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
+    animation: bordertxt infinite 5s;
+    animation-direction: alternate;
+}
+
+@keyframes bordertxt {
+    50% {
+        border-color: #d10101;
+    }
+
+    100% {
+        border-color: #000;
+    }
 }
 
 .trailer-history {
@@ -201,15 +282,18 @@ a:hover {
 }
 
 .trailer {
-    margin-left: 2rem;
+
     width: 45vw;
     height: 53vh;
     border: #d10101 solid 5px;
-    box-shadow: 1.3rem 1rem 1rem 0.5rem black;
+    box-shadow: 0.7rem 1.5rem 1.5rem 0.5rem black;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: bordertxt infinite 5s;
+    animation-direction: alternate;
 }
+
 
 
 .show {
@@ -236,6 +320,17 @@ a:hover {
     background-image: url(sunGrupoAvatar.jpeg);
 }
 
+.quatro {
+    background-image: url(download\ \(3\).jpg);
+}
+
+
+
+
+
+
+
+
 .fire {
     background-image: url(zuko.jpg);
     background-position: left;
@@ -250,6 +345,7 @@ a:hover {
 .txt-fire {
     height: 100vh;
     width: 50vw;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -257,6 +353,8 @@ a:hover {
     align-items: center;
     text-align: center;
 }
+
+
 
 .zuko-fire {
     height: 100vh;
@@ -310,6 +408,74 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.button {
+    background-color: #000;
+    border: 0px;
+    outline: 0px;
+    color: #fff;
+    width: 200px;
+    padding: 20px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.liquid {
+    background-color: #2893eb;
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 5px -5px 25px #104e81,
+        inset -5px 0px 25px #104e81;
+}
+
+.liquid::after {
+    content: '';
+    width: 450px;
+    height: 400px;
+    background: #000;
+    z-index: 1;
+    position: absolute;
+    left: -110px;
+    top: -380px;
+    border-radius: 45%;
+    animation: animate 5s linear 2s infinite;
+}
+
+.liquid::before {
+    content: '';
+    width: 450px;
+    height: 400px;
+    background-color: rgb(68, 160, 235);
+    z-index: 1;
+    position: absolute;
+    left: -110px;
+    top: -380px;
+    border-radius: 40%;
+    animation: animate 5s linear 1.8s infinite;
+}
+
+.btn-txt {
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
