@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.videoBackground {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+    text-align: center;
+    margin-top: 6vh;
+    font-size: 60px;
+    color: white;
+    text-shadow: 6px 6px 10px #000000;
+}
+
+
+.fighters-choice {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: 3s ease;
+    color: white;
+}
+
+#fighterone {
+    margin-left: 3rem;
+}
+
+#fightertwo {
+    margin-right: 3rem;
+}
+
+
+.choice {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.character {
+    box-sizing: border-box;
+    width: 19rem;
+    height: 27rem;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-top: 9rem;
+    background-position: center;
+    background-size: cover;
+    color: #000;
+}
+
+.character:hover {
+    border: 1px solid black;
+    transform: scale(1.3);
+    color: #fff;
+}
+
+.character:active {
+    transform: scale(0.7) rotateZ(1.9deg);
+}
+
+.character-txt {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.zuko {
+    background-image: url(assets/zukoFire.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.ozai {
+    background-image: url(assets/Ozai.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.azula {
+    background-image: url(assets/azulaFire.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.iroh {
+    background-image: url(assets/Iroh.jpg);
+}
+
+
+
+.overlay01 {
+    position: absolute;
+    background-color: black;
+    width: 50%;
+    height: 100vh;
+    opacity: 0.3;
+    left: 0;
+    top: 0;
+}
+
+.overlay02 {
+    position: absolute;
+    background-color: black;
+    width: 50%;
+    height: 100vh;
+    opacity: 0.3;
+    right: 0;
+    top: 0;
+}
+
+.character01 {
+    position: absolute;
+    background-image: url(assets/zukoFire.jpg);
+    width: 50vw;
+    height: 100vh;
+    background-size: cover;
+    left: 0;
+    top: 0;
+}
+
+.character02 {
+    position: absolute;
+    background-image: url(assets/zukoFire.jpg);
+    width: 50vw;
+    height: 100vh;
+    background-size: cover;
+    right: 0;
+    top: 0;
+}

@@ -28,6 +28,7 @@
     text-align: center;
     font-size: 5rem;
     animation: changeColor 10s forwards infinite;
+    animation-direction: alternate;
 }
 
 @keyframes changeColor {
@@ -103,7 +104,7 @@ a:hover {
 .home-button {
     height: 10vh;
     width: 4vw;
-    background-image: url(lemo.png);
+    background-image: url(assets/lemo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -123,7 +124,7 @@ a:hover {
 }
 
 .fire-button {
-    background-image: url(EmblemaFireNation.webp);
+    background-image: url(assets/EmblemaFireNation.webp);
     border-color: rgb(137, 135, 135);
 }
 
@@ -132,7 +133,7 @@ a:hover {
 }
 
 .water-button {
-    background-image: url(emblemaWaterNation.png);
+    background-image: url(assets/emblemaWaterNation.png);
     border-color: rgb(137, 135, 135);
 }
 
@@ -141,7 +142,7 @@ a:hover {
 }
 
 .air-button {
-    background-image: url(emblemaAr.jpg);
+    background-image: url(assets/emblemaAr.jpg);
     border-color: rgb(137, 135, 135);
 }
 
@@ -150,7 +151,7 @@ a:hover {
 }
 
 .earth-button {
-    background-image: url(emblemaEarthNation.jpg);
+    background-image: url(assets/emblemaEarthNation.jpg);
     border-color: rgb(137, 135, 135);
 }
 
@@ -215,7 +216,7 @@ a:hover {
 
 
 .background-home {
-    background-image: url(dropAir.jpg);
+    background-image: url(assets/dropAir.jpg);
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -242,7 +243,7 @@ a:hover {
     height: 100vh;
     width: 100vw;
     display: flex;
-    background-image: url(avatarWallpaper.jpg);
+    background-image: url(assets/avatarWallpaper.jpg);
     background-position: center;
     background-size: cover;
     color: rgb(255, 255, 255);
@@ -304,7 +305,7 @@ a:hover {
 .lax {
     height: 45vh;
     width: 100vw;
-    background-image: url(irohAndZuko.jpg);
+    background-image: url(assets/irohAndZuko.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -313,15 +314,15 @@ a:hover {
 }
 
 .um {
-    background-image: url(avataresWallpaper.jpg);
+    background-image: url(assets/avataresWallpaper.jpg);
 }
 
 .dois {
-    background-image: url(sunGrupoAvatar.jpeg);
+    background-image: url(assets/sunGrupoAvatar.jpeg);
 }
 
 .quatro {
-    background-image: url(download\ \(3\).jpg);
+    background-image: url(assets/download\ \(3\).jpg);
 }
 
 
@@ -332,7 +333,7 @@ a:hover {
 
 
 .fire {
-    background-image: url(zuko.jpg);
+    background-image: url(assets/zuko.jpg);
     background-position: left;
     background-repeat: no-repeat;
 
@@ -359,7 +360,7 @@ a:hover {
 .zuko-fire {
     height: 100vh;
     width: 50vw;
-    background-image: url(zukoSolo.jpg);
+    background-image: url(assets/zukoSolo.jpg);
     background-size: cover;
     background-position: bottom;
 }
@@ -386,7 +387,7 @@ a:hover {
 
 
 .air {
-    background-image: url(aangBackground.jpg);
+    background-image: url(assets/aangBackground.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -404,7 +405,7 @@ a:hover {
 .water {
     height: 100vh;
     width: 100vw;
-    background-image: url(kataraBackground.png);
+    background-image: url(assets/kataraBackground.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -485,7 +486,7 @@ a:hover {
 .earth {
     height: 100vh;
     width: 100vw;
-    background-image: url(tophBackground.png);
+    background-image: url(assets/tophBackground.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

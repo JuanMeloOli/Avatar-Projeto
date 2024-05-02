@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="AgniKai.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <title>Agni Kai</title>
+</head>
+
+<body>
+    <!--  Background 01 - FIRE -->
+    <div class="videoBackground">
+        <video src="assets/FireBackground.mp4" loop muted autoplay></video>
+    </div>
+
+
+    <h1>Agni Kai</h1>
+    <div class="fighters-choice">
+        <span class="fighter" id="fighterone">
+            Escolha um Personagem <br> para o Player
+        </span>
+        <span class="fighter" id="fightertwo">
+        </span>
+    </div>
+    <section class="choice">
+        <div class="character ozai" onclick="escolhaOzai()">
+            <span class="character-txt">Senhor do Fogo Ozai</span>
+        </div>
+        <div class="character zuko" onclick="escolhaZuko()">
+            <span class="character-txt">Príncipe Zuko</span>
+        </div>
+        <div class="character azula" onclick="escolhaAzula()">
+            <span class="character-txt">Princesa Azula</span>
+        </div>
+        <div class="character iroh" onclick="escolhaIroh()">
+            <span class="character-txt">Iroh</span>
+        </div>
+    </section>
+
+    <!--  Background 02 - overlay Black -->
+    <div class="overlay01" id="overlay01" style="display: none"></div>
+    <div class="overlay02" id="overlay02" style="display: none"></div>
+
+    <!--  Background 03 - character -->
+    <div class="character01" id="character01" style="display: none">
+    </div>
+    <div class="character02" id="character02" style="display: none"></div>
+</body>
+
+</html>
+<script src="agniKai.js"></script>
