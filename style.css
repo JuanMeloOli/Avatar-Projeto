@@ -97,7 +97,7 @@ nav .standard {
     transition: 0.7s all;
 }
 
-a:hover {
+nav a:hover {
     transform: scale(1.15);
 }
 
@@ -373,14 +373,25 @@ a:hover {
 
 .txt-fire p {
     font-size: 1.5rem;
+    color: #fff;
 }
 
-.button-entrar {
+
+
+.button-agnikai {
+    text-decoration: none;
     height: 5vh;
     width: 6vw;
     line-height: 5vh;
     background-color: #d10101;
     color: aliceblue;
+    border-radius: 45px;
+    transition: 2s ease-in-out;
+}
+
+.button-agnikai:hover {
+    background-color: #fff200;
+    color: #000;
 }
 
 

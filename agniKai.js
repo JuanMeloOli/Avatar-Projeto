@@ -84,3 +84,14 @@ function escolhaIroh(params) {
     ajustarOpacidade();
   }
 }
+
+var clickCount = 0
+button_player.addEventListener('click', () => {
+  clickCount++;
+  atack_player.innerHTML = `Ataques de Fogo: ${clickCount}`;
+});
+
+
+function name(params) {
+  
+}
