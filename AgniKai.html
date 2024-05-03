@@ -27,16 +27,16 @@
         </span>
     </div>
     <section class="choice">
-        <div class="character ozai" onclick="escolhaOzai()">
+        <div id="characterOzaiButton" class="character ozai" onclick="escolhaOzai()">
             <span class="character-txt">Senhor do Fogo Ozai</span>
         </div>
-        <div class="character zuko" onclick="escolhaZuko()">
+        <div id="characterZukoButton" class="character zuko" onclick="escolhaZuko()">
             <span class="character-txt">Príncipe Zuko</span>
         </div>
-        <div class="character azula" onclick="escolhaAzula()">
+        <div id="characterAzulaButton" class="character azula" onclick="escolhaAzula()">
             <span class="character-txt">Princesa Azula</span>
         </div>
-        <div class="character iroh" onclick="escolhaIroh()">
+        <div id="characterIrohButton" class="character iroh" onclick="escolhaIroh()">
             <span class="character-txt">Iroh</span>
         </div>
     </section>
@@ -46,18 +46,21 @@
     <div class="overlay02" id="overlay02" style="display: none"></div>
 
     <!--  Background 03 - character -->
-    <div class="character01" id="character01" style="display: none">
-        <div class="player">
-        <p class="player-click" id="button_player"></p>
-        <p class="atack" id="atack_player">Ataques de Fogo: 0</p>
-    </div>
-    </div>
-    <div class="character02" id="character02" style="display: none">
-        <div class="cpu">
-        <p class="cpu-click"></p>
-        <p class="atack">Ataques de Fogo: 0</p>
+    <div id="characterBackground" style="display: none">
+        <div class="character01" id="character01">
+            <div class="player" id="player" style="display: none">
+                <p class="player-click" id="button_player"></p>
+                <p class="atack" id="atack_player">Ataques de Fogo: 0</p>
+            </div>
         </div>
-    </div>
+        <span class="timer" id="timer" style="display: none">Iniciando em 3...</span>
+        <span class="start-game" id="startGame" onclick="gamestart()">Lutar</span>
+        <div class="character02" id="character02">
+            <div class="cpu" id="cpu" style="display: none">
+                <p class="cpu-click"></p>
+                <p class="atack" id="atack_cpu">Ataques de Fogo: 0</p>
+            </div>
+        </div>
     </div>
 </body>
 

@@ -167,7 +167,7 @@ h1 {
 
 
 
-.player-click{
+.player-click {
     height: 15vh;
     width: 15vh;
     line-height: 15vh;
@@ -179,11 +179,11 @@ h1 {
     color: #fff;
 }
 
-.player-click:active{
+.player-click:active {
     transform: scale(0.8);
 }
 
-.cpu-click{
+.cpu-click {
     height: 15vh;
     width: 15vh;
     line-height: 15vh;
@@ -193,24 +193,58 @@ h1 {
     background-size: cover;
     border-radius: 180px;
     color: #fff;
-    animation: cpuClick 0.15s infinite;
-    
+    animation: cpuClick 0.11s infinite;
+
 }
 
-.atack{
+.atack {
     color: #fff;
     height: 15vh;
     width: 15vh;
     font-size: 1.5rem;
     text-align: center;
-    
+
 }
 
-@keyframes cpuClick{
-    0%{
+@keyframes cpuClick {
+    0% {
         transform: scale(0.8);
     }
-    50%{
-        transform: scale(1); 
+
+    50% {
+        transform: scale(1);
     }
+}
+
+.start-game {
+    top: 50%;
+    left: 50%;
+    height: 5vh;
+    width: 7vw;
+    line-height: 5vh;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #fff;
+    color: aqua;
+    z-index: 1
+}
+
+.timer {
+    top: 20%;
+    left: 50%;
+    height: 8vh;
+    width: 20vw;
+    line-height: 8vh;
+    font-size: 2.5rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: #fff;
+    z-index: 1
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.2;
 }

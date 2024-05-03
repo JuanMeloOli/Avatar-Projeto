@@ -4,8 +4,12 @@ let opacidade2 = 0;
 let aumentando = true;
 let personagem01;
 let personagem02;
+let contCPU = 0;
+let tempo_inicio = 3;
 
 function ajustarOpacidade() {
+  overlay01.style.display = "flex";
+  overlay02.style.display = "flex";
   if (aumentando) {
     if (opacidade1 < 1) {
       opacidade1 += 0.003;
@@ -13,8 +17,7 @@ function ajustarOpacidade() {
       aumentando = false;
     }
   } else {
-    character01.style.display = "flex";
-    character02.style.display = "flex";
+    characterBackground.style.display = "flex";
     if (opacidade2 < 1) {
       opacidade2 += 0.001;
     }
@@ -28,70 +31,106 @@ function ajustarOpacidade() {
 
 function escolhaOzai(params) {
   personagensEscolhidos++;
+  characterOzaiButton.style.borderWidth = "5px";
+  characterOzaiButton.style.pointerEvents = "none";
   if (personagensEscolhidos == 1) {
+    characterOzaiButton.style.borderColor = "green";
+    characterOzaiButton.style.color = "green";
     character01.style.backgroundImage = 'url("assets/Ozai.jpg")';
     fighterone.innerHTML = "Player escolheu: Ozai";
     fightertwo.innerHTML = "Escolha um Personagem <br> para a CPU";
   } else if (personagensEscolhidos == 2) {
+    characterOzaiButton.style.borderColor = "red";
+    characterOzaiButton.style.color = "red";
     character02.style.backgroundImage = 'url("assets/Ozai.jpg")';
     fightertwo.innerHTML = "CPU: Ozai";
-    overlay01.style.display = "flex";
-    overlay02.style.display = "flex";
-    ajustarOpacidade();
+    setTimeout(ajustarOpacidade, 1500);
   }
 }
 
 function escolhaZuko(params) {
   personagensEscolhidos++;
+  characterZukoButton.style.borderWidth = "5px";
+  characterZukoButton.style.pointerEvents = "none";
   if (personagensEscolhidos == 1) {
+    characterZukoButton.style.borderColor = "green";
+    characterZukoButton.style.color = "green";
     character01.style.backgroundImage = 'url("assets/zukoFire.jpg")';
     fighterone.innerHTML = "Player<br> Zuko";
     fightertwo.innerHTML = "Escolha um Personagem <br> para a CPU";
   } else if (personagensEscolhidos == 2) {
+    characterZukoButton.style.borderColor = "red";
+    characterZukoButton.style.color = "red";
     character02.style.backgroundImage = 'url("assets/zukoFire.jpg")';
     fightertwo.innerHTML = "CPU: Zuko";
-    overlay01.style.display = "flex";
-    overlay02.style.display = "flex";
-    ajustarOpacidade();
+    setTimeout(ajustarOpacidade, 1500);
   }
 }
 function escolhaAzula(params) {
   personagensEscolhidos++;
+  characterAzulaButton.style.borderWidth = "5px";
+  characterAzulaButton.style.pointerEvents = "none";
   if (personagensEscolhidos == 1) {
+    characterAzulaButton.style.borderColor = "green";
+    characterAzulaButton.style.color = "green";
     character01.style.backgroundImage = 'url("assets/azulaFire.jpeg")';
     fighterone.innerHTML = "Player<br> Azula";
     fightertwo.innerHTML = "Escolha um Personagem <br> para a CPU";
   } else if (personagensEscolhidos == 2) {
+    characterAzulaButton.style.borderColor = "red";
+    characterAzulaButton.style.color = "red";
     character02.style.backgroundImage = 'url("assets/azulaFire.jpeg")';
     fightertwo.innerHTML = "CPU: Azula";
-    overlay01.style.display = "flex";
-    overlay02.style.display = "flex";
-    ajustarOpacidade();
+    setTimeout(ajustarOpacidade, 1500);
   }
 }
 
 function escolhaIroh(params) {
   personagensEscolhidos++;
+  characterIrohButton.style.borderWidth = "5px";
+  characterIrohButton.style.pointerEvents = "none";
   if (personagensEscolhidos == 1) {
+    characterIrohButton.style.borderColor = "green";
+    characterIrohButton.style.color = "green";
     character01.style.backgroundImage = 'url("assets/Iroh.jpg")';
     fighterone.innerHTML = "Player<br> Iroh";
     fightertwo.innerHTML = "Escolha um Personagem <br> para a CPU";
   } else if (personagensEscolhidos == 2) {
+    characterIrohButton.style.borderColor = "red";
+    characterIrohButton.style.color = "red";
     character02.style.backgroundImage = 'url("assets/Iroh.jpg")';
     fightertwo.innerHTML = "CPU: Iroh";
-    overlay01.style.display = "flex";
-    overlay02.style.display = "flex";
-    ajustarOpacidade();
+
+    setTimeout(ajustarOpacidade, 1500);
+  }
+}
+function contar() {
+  contCPU++;
+  atack_cpu.innerHTML = `Ataques de Fogo: ${contCPU}`;
+  if (contCPU <= 200) {
+    setTimeout(contar, 140);
+  }
+}
+function iniciar() {
+  tempo_inicio--;
+  timer.innerHTML = `Iniciando em ${tempo_inicio}...`;
+  if (tempo_inicio >= 0) {
+    setTimeout(iniciar, 1000);
+  } else {
+    timer.style.display = "none";
+    player.style.display = "block";
+    cpu.style.display = "block";
   }
 }
 
-var clickCount = 0
-button_player.addEventListener('click', () => {
-  clickCount++;
-  atack_player.innerHTML = `Ataques de Fogo: ${clickCount}`;
-});
-
-
-function name(params) {
-  
+function gamestart(params) {
+  timer.style.display = "block";
+  setTimeout(contar, 3500);
+  setTimeout(iniciar, 300);
+  startGame.style.display = "none";
+  var clickCount = 0;
+  button_player.addEventListener("click", () => {
+    clickCount++;
+    atack_player.innerHTML = `Ataques de Fogo: ${clickCount}`;
+  });
 }
