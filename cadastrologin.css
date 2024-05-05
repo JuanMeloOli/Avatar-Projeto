@@ -75,13 +75,13 @@
 
 .first-wall .inputForm input:focus {
     outline: none;
-    background: linear-gradient(to bottom, rgb(5, 5, 190, 0.1), rgba(5, 5, 190, 0.4));
+    background: linear-gradient(to bottom, rgb(5, 5, 190, 0.1), rgb(5, 5, 190, 0.1), rgba(5, 5, 190, 0.4));
     border-bottom: 2px solid rgb(5, 5, 190);
 }
 
 .second-wall .inputForm input:focus {
     outline: none;
-    background: linear-gradient(to bottom, rgba(190, 5, 5, 0.1), rgba(190, 5, 5, 0.4));
+    background: linear-gradient(to bottom, rgba(190, 5, 5, 0.1), rgba(190, 5, 5, 0.1), rgba(190, 5, 5, 0.4));
     border-bottom: 2px solid rgb(190, 5, 5);
 }
 
