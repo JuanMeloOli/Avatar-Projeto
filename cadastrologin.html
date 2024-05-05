@@ -10,23 +10,25 @@
 
 <body>
     <div class="content">
+        <div class="overlay" id="overlay"></div>
         <div class="wall first-wall">
-            <h1>Faça o Login</h1>
+            <h1 class="login-title">Login</h1>
             <div class="inputForm">
                 <span>Email</span>
-                <input type="text" id="input_email">
+                <input type="email" id="input_email">
             </div>
 
             <div class="inputForm">
                 <span>Senha</span>
-                <input type="text" id="input_password">
+                <input type="password" id="input_password">
             </div>
             <button class="btn">Acessar</button>
+            <span>Você não tem uma conta? <span class="blue" onclick="mudar()">Cadastrar</span></span>
 
         </div>
         <div class="wall second-wall">
 
-            <h1>Cadastre-Se</h1>
+            <h1 class="register-title">Cadastro</h1>
             <div class="inputForm">
                 <span>Nome</span>
                 <input type="text" id="input_name">
@@ -35,12 +37,12 @@
 
             <div class="inputForm">
                 <span>Email</span>
-                <input type="text" id="input_email">
+                <input type="email" id="input_email">
             </div>
 
             <div class="inputForm">
                 <span>Senha</span>
-                <input type="text" id="input_password">
+                <input type="password" id="input_password">
             </div>
 
 
@@ -56,6 +58,7 @@
                 <label for="ar">Ar</label><br><br>
             </form>
             <button class="btn">Cadastrar</button>
+            <span>Você já tem uma conta? <span class="red" onclick="mudar2()">Fazer login</span></span>
 
         </div>
 
@@ -66,3 +69,4 @@
 </body>
 
 </html>
+<script src="cadastrologin.js"></script>

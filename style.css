@@ -503,6 +503,16 @@ nav a:hover {
     background-size: cover;
 }
 
+.aboutMe {
+    height: 100vh;
+    width: 100vw;
+    padding-left: 1rem;
+    display: flex;
+    background-color: #fff;
+}
+
+
+
 .white {
     color: white;
 }

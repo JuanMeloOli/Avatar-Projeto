@@ -8,14 +8,23 @@
 .content {
     display: flex;
     height: 100vh;
-    color: #000000;
+    background-color: #0e0d0d;
+    color: #fff;
     font-size: 1.2rem;
+}
+
+.login-title {
+    text-shadow: 0 0 1rem rgb(5, 5, 190);
+}
+
+.register-title {
+    text-shadow: 0 0 1rem rgb(190, 0, 0);
 }
 
 .wall {
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
     width: 50%;
     height: 100%;
@@ -24,14 +33,13 @@
 }
 
 .first-wall {
-    background: url(assets/Sokka\,\ Avatar_\ The\ Last\ Airbender.jpg);
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .second-wall {
-    background: url(assets/download\ \(5\).jpg);
+    background: url();
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,26 +47,42 @@
 
 .inputForm {
     display: flex;
-    align-items: center;
+    width: 25rem;
     flex-direction: column;
+
 }
 
 .inputForm input {
     border: 0;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgb(190, 0, 0);
     background-color: transparent;
+    height: 2rem;
+    color: #fff;
+    font-size: 1.3rem;
+    padding-left: 2rem;
 }
+
+.first-wall .inputForm input {
+    border-bottom: 1px solid rgb(5, 5, 190);
+}
+
+.inputForm span {
+    margin-left: 1rem;
+    color: rgb(255, 255, 255, 0.4);
+    font-size: 1.2rem;
+}
+
 
 .first-wall .inputForm input:focus {
     outline: none;
-    background: linear-gradient(360deg, rgb(15, 35, 188) -120%, rgba(190, 122, 76, 0) 90%);
-    border-bottom: 2px solid rgb(15, 35, 188);
+    background: linear-gradient(to bottom, rgb(5, 5, 190, 0.1), rgba(5, 5, 190, 0.4));
+    border-bottom: 2px solid rgb(5, 5, 190);
 }
 
 .second-wall .inputForm input:focus {
     outline: none;
-    background: linear-gradient(360deg, rgb(188, 15, 15) -120%, rgba(190, 122, 76, 0) 90%);
-    border-bottom: 2px solid rgb(188, 15, 15);
+    background: linear-gradient(to bottom, rgba(190, 5, 5, 0.1), rgba(190, 5, 5, 0.4));
+    border-bottom: 2px solid rgb(190, 5, 5);
 }
 
 .dobraForm {
@@ -68,14 +92,52 @@
 }
 
 .btn {
-    display: flex;
-    width: fit-content;
+    width: 14rem;
+    height: 3rem;
+    font-size: 1.5rem;
     padding: 0 1rem;
     color: #fff;
-    background-color: rgba(15, 35, 188, 0.6);
-
+    background-color: rgb(190, 5, 5, 0.1);
+    border-color: rgb(190, 5, 5);
+    border-radius: 0.5rem;
 }
 
-.second-wall .btn {
-    background-color: rgba(188, 15, 15, 0.6);
+.first-wall .btn {
+    border-color: rgb(5, 5, 190);
+    background-color: rgb(5, 5, 190, 0.1);
+}
+
+.overlay {
+    position: absolute;
+    background-image: url(assets/kataraArt.jpg);
+    transform: translate(100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    transition: 1s ease-in-out;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    background-color: #0e0d0d;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: rgb(190, 5, 5);
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: rgb(190, 5, 5)
 }
