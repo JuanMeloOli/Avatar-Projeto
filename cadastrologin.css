@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.content {
+    display: flex;
+    height: 100vh;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.wall {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 2rem;
+    align-items: center;
+}
+
+.first-wall {
+    background: url(assets/Sokka\,\ Avatar_\ The\ Last\ Airbender.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second-wall {
+    background: url(assets/download\ \(5\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inputForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputForm input {
+    border: 0;
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+
+.first-wall .inputForm input:focus {
+    outline: none;
+    background: linear-gradient(360deg, rgb(15, 35, 188) -120%, rgba(190, 122, 76, 0) 90%);
+    border-bottom: 2px solid rgb(15, 35, 188);
+}
+
+.second-wall .inputForm input:focus {
+    outline: none;
+    background: linear-gradient(360deg, rgb(188, 15, 15) -120%, rgba(190, 122, 76, 0) 90%);
+    border-bottom: 2px solid rgb(188, 15, 15);
+}
+
+.dobraForm {
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    width: fit-content;
+    padding: 0 1rem;
+    color: #fff;
+    background-color: rgba(15, 35, 188, 0.6);
+
+}
+
+.second-wall .btn {
+    background-color: rgba(188, 15, 15, 0.6);
+}

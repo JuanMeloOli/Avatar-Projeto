@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    const questions = [
+        "Qual é o maior planeta do Sistema Solar?",
+        "Quem escreveu 'Dom Quixote'?",
+        "Qual é o elemento químico com o símbolo 'H'?",
+        "Qual é a capital do Brasil?"
+    ];
+
+    const options = [
+        ["a) Terra", "b) Júpiter", "c) Saturno"],
+        ["a) William Shakespeare", "b) Miguel de Cervantes", "c) Dante Alighieri"],
+        ["a) Hélio", "b) Hidrogênio", "c) Hafnio"],
+        ["a) Rio de Janeiro", "b) São Paulo", "c) Brasília"]
+    ];
+
+    const correctAnswers = ["b", "b", "b", "c"];
+
+    // Função para apresentar o quiz
+    function presentQuiz() {
+        let score = 0;
+
+        for (let i = 0; i < questions.length; i++) {
+            let answer = prompt(questions[i] + "\n" + options[i].join("\n"));
+
+            if (answer.toLowerCase() === correctAnswers[i]) {
+                alert("Correto!");
+                score++;
+            } else {
+                alert("Incorreto. A resposta correta é: " + correctAnswers[i]);
+            }
+        }
+
+        alert("Quiz finalizado!\nPontuação: " + score + " de " + questions.length);
+    }
+
+    // Chamando a função para iniciar o quiz
+    presentQuiz();
+</script>
