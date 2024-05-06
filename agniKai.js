@@ -107,8 +107,12 @@ function escolhaIroh(params) {
 function contar() {
   contCPU++;
   atack_cpu.innerHTML = `Ataques de Fogo: ${contCPU}`;
-  if (contCPU <= 200) {
+  if (contCPU < 200) {
     setTimeout(contar, 140);
+  }else if(contCPU == 200){
+    atack_cpu.style.fontSize = "3rem";
+    atack_cpu.innerHTML = `CPU WIN`;
+    button_player.innerHTML = ``
   }
 }
 function iniciar() {
@@ -132,5 +136,10 @@ function gamestart(params) {
   button_player.addEventListener("click", () => {
     clickCount++;
     atack_player.innerHTML = `Ataques de Fogo: ${clickCount}`;
+    if (clickCount == 200) {
+      atack_cpu.style.fontSize = "3rem";
+      atack_player.innerHTML = `You WIN`;
+      button_player.innerHTML = ``
+    }
   });
 }
