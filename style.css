@@ -378,9 +378,7 @@ nav a:hover {
 
 .txt-fire p {
     font-size: 1.7rem;
-    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    font-family: "Sofia", sans-serif;
 }
 
 
@@ -418,25 +416,86 @@ nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 1rem;
+    display: flex;
 }
+.aang-air {
+    height: 100vh;
+    width: 50vw;
+    background-image: url(assets/aangSolo.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
 
 .txt-air {
     height: 100vh;
     width: 50vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-
-
+.txt-air p{
+    font-size: 1.7rem;
+}
 
 
 .water {
+    background-image: url(assets/kataraBackground.png);
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
-    background-image: url(assets/kataraBackground.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    display: flex;
 }
+
+.txt-water {
+    height: 100vh;
+    width: 50vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.txt-water h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.txt-water p {
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+
+
+
+.katara-water {
+    height: 100vh;
+    width: 50vw;
+    background-image: url(assets/kataraSolo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
 
 .button {
     background-color: #000;
@@ -517,7 +576,39 @@ nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
 }
+
+
+
+.toph-earth {
+    height: 100vh;
+    width: 50vw;
+    background-image: url(assets/tophSolo.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+
+.txt-earth {
+    height: 100vh;
+    width: 50vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.txt-earth p{
+    font-size: 1.7rem;
+}
+
+
 
 .aboutMe {
     height: 100vh;
