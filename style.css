@@ -8,6 +8,11 @@
 
 }
 
+:root {
+    --red: rgb(190, 0, 0);
+}
+
+
 .home {
     height: 100vh;
     width: 100vw;
@@ -372,27 +377,38 @@ nav a:hover {
 }
 
 .txt-fire p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
+    font-family: "Sofia", sans-serif;
 }
 
 
 
 .button-agnikai {
+    font-size: 1rem;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.7rem;
+    color: #fff;
+    background-image: linear-gradient(rgb(215, 0, 0), rgb(80, 0, 0));
+    border: 2px solid rgb(255, 255, 255);
+    border-bottom: 0.3rem solid rgb(255, 255, 255);
+    box-shadow: 0 0.7rem 1rem 0.2rem var(--red);
     text-decoration: none;
-    height: 5vh;
-    width: 6vw;
-    line-height: 5vh;
-    background-color: #d10101;
-    color: aliceblue;
-    border-radius: 45px;
-    transition: 2s ease-in-out;
 }
 
-.button-agnikai:hover {
-    background-color: #fff200;
-    color: #000;
+.button-agnikai:focus {
+    transform: translate(0, -3px);
+    cursor: pointer;
+    transition: 0.2s;
 }
+
+.button-agnikai:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(148, 148, 148);
+}
+
+
 
 
 
@@ -518,5 +534,5 @@ nav a:hover {
 }
 
 .red {
-    color: #d10101;
+    color: var(--red);
 }

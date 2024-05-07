@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --red: rgb(190, 0, 0);
+}
+
 
 .content {
     display: flex;
@@ -18,7 +22,7 @@
 }
 
 .register-title {
-    text-shadow: 0 0 1rem rgb(190, 0, 0);
+    text-shadow: 0 0 1rem var(--red);
 }
 
 .wall {
@@ -55,7 +59,7 @@
 
 .inputForm input {
     border: 0;
-    border-bottom: 1px solid rgb(190, 0, 0);
+    border-bottom: 1px solid var(--red);
     background-color: transparent;
     height: 2rem;
     color: #fff;
@@ -83,7 +87,7 @@
 .second-wall .inputForm input:focus {
     outline: none;
     background: linear-gradient(to bottom, rgba(190, 5, 5, 0.1), rgba(190, 5, 5, 0.1), rgba(190, 5, 5, 0.4));
-    border-bottom: 2px solid rgb(190, 5, 5);
+    border-bottom: 2px solid var(--red);
 }
 
 .dobraForm {
@@ -99,7 +103,7 @@
     padding: 0 1rem;
     color: #fff;
     background-color: rgb(190, 5, 5, 0.1);
-    border-color: rgb(190, 5, 5);
+    border-color: var(--red);
     border-radius: 0.5rem;
 }
 
@@ -132,7 +136,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    background-color: rgb(190, 5, 5);
+    background-color: var(--red);
 }
 
 .blue {
@@ -140,5 +144,5 @@ input[type="radio"]:checked {
 }
 
 .red {
-    color: rgb(190, 5, 5)
+    color: var(--red)
 }

@@ -19,13 +19,35 @@ body {
     z-index: -1;
 }
 
+.toptext {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
 h1 {
     font-family: "Lobster", sans-serif;
-    text-align: center;
-    margin-top: 6vh;
-    font-size: 60px;
+    font-size: 3.5rem;
     color: white;
     text-shadow: 6px 6px 10px #000000;
+}
+
+.exit {
+    text-align: center;
+    width: 3rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+
+}
+
+.exit:hover {
+    color: #000;
+    background-color: #fff;
 }
 
 
@@ -139,6 +161,14 @@ h1 {
     top: 0;
 }
 
+.overlay03 {
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.3;
+}
+
 .character01 {
     position: absolute;
     background-image: url(assets/zukoFire.jpg);
@@ -244,7 +274,8 @@ h1 {
     z-index: 1
 }
 
-.disabled {
-    pointer-events: none;
-    opacity: 0.2;
+
+.result {
+    font-size: 5rem;
+    color: #fff;
 }

@@ -1,6 +1,7 @@
 let personagensEscolhidos = 0;
 let opacidade1 = 0.3;
 let opacidade2 = 0;
+let opacidade3 = 0.3;
 let aumentando = true;
 let personagem01;
 let personagem02;
@@ -104,17 +105,13 @@ function escolhaIroh(params) {
     setTimeout(ajustarOpacidade, 1500);
   }
 }
-function contar() {
-  contCPU++;
-  atack_cpu.innerHTML = `Ataques de Fogo: ${contCPU}`;
-  if (contCPU < 200) {
-    setTimeout(contar, 140);
-  }else if(contCPU == 200){
-    atack_cpu.style.fontSize = "3rem";
-    atack_cpu.innerHTML = `CPU WIN`;
-    button_player.innerHTML = ``
-  }
+
+function reiniciar() {
+  setTimeout(function () {
+    window.location.href = "fire-AgniKai.html";
+  }, 3000);
 }
+
 function iniciar() {
   tempo_inicio--;
   timer.innerHTML = `Iniciando em ${tempo_inicio}...`;
@@ -126,6 +123,24 @@ function iniciar() {
     cpu.style.display = "block";
   }
 }
+function contar() {
+  contCPU++;
+  atack_cpu.innerHTML = `Ataques de Fogo: ${contCPU}`;
+  if (contCPU < 200) {
+    setTimeout(contar, 140);
+  } else if (contCPU == 200) {
+    atack_cpu.style.display = "none";
+    cpuclick.style.display = "none";
+    buttonplayer.style.display = "none";
+    atackplayer.style.display = "none";
+    resultCPU.innerHTML = "Cpu Win";
+    resultPlayer.innerHTML = "You Lose";
+    resultCPU.style.display = "flex";
+    resultPlayer.style.display = "flex";
+
+    reiniciar();
+  }
+}
 
 function gamestart(params) {
   timer.style.display = "block";
@@ -133,13 +148,21 @@ function gamestart(params) {
   setTimeout(iniciar, 300);
   startGame.style.display = "none";
   var clickCount = 0;
-  button_player.addEventListener("click", () => {
+  buttonplayer.addEventListener("click", () => {
     clickCount++;
-    atack_player.innerHTML = `Ataques de Fogo: ${clickCount}`;
+    atackplayer.innerHTML = `Ataques de Fogo: ${clickCount}`;
     if (clickCount == 200) {
-      atack_cpu.style.fontSize = "3rem";
-      atack_player.innerHTML = `You WIN`;
-      button_player.innerHTML = ``
+      atack_cpu.style.display = "none";
+      cpuclick.style.display = "none";
+      buttonplayer.style.display = "none";
+      atackplayer.style.display = "none";
+      resultCPU.innerHTML = "Cpu Lose";
+      resultPlayer.innerHTML = "You Win";
+      resultCPU.style.display = "flex";
+      resultPlayer.style.display = "flex";
+      contCPU = -1000;
+
+      reiniciar();
     }
   });
 }

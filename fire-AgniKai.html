@@ -12,13 +12,18 @@
 </head>
 
 <body>
+    <audio autoplay loop>
+        <source src="assets/agniKaiTheme.mp3" type="audio/mpeg">
+    </audio>
     <!--  Background 01 - FIRE -->
     <div class="videoBackground">
         <video src="assets/FireBackground.mp4" loop muted autoplay></video>
     </div>
 
-
-    <h1>Agni Kai</h1>
+    <div class="toptext">
+        <h1>Agni Kai</h1>
+        <a href="index.html" class="exit">Sair</a>
+    </div>
     <div class="fighters-choice">
         <span class="fighter" id="fighterone">
             Escolha um Personagem <br> para o Player
@@ -46,18 +51,22 @@
     <div class="overlay02" id="overlay02" style="display: none"></div>
 
     <!--  Background 03 - character -->
+
+    <div class="overlay03" id="overlay03" style="display: none"></div>
     <div id="characterBackground" style="display: none">
         <div class="character01" id="character01">
             <div class="player" id="player" style="display: none">
-                <p class="player-click" id="button_player"></p>
-                <p class="atack" id="atack_player">Ataques de Fogo: 0</p>
+                <p class="player-click" id="buttonplayer"></p>
+                <div class="result" id="resultPlayer" style="display: none;"></div>
+                <p class="atack" id="atackplayer">Ataques de Fogo: 0</p>
             </div>
         </div>
         <span class="timer" id="timer" style="display: none">Iniciando em 3...</span>
         <span class="start-game" id="startGame" onclick="gamestart()">Lutar</span>
         <div class="character02" id="character02">
             <div class="cpu" id="cpu" style="display: none">
-                <p class="cpu-click"></p>
+                <p class="cpu-click" id="cpuclick"></p>
+                <div class="result" id="resultCPU" style="display: none;"></div>
                 <p class="atack" id="atack_cpu">Ataques de Fogo: 0</p>
             </div>
         </div>
