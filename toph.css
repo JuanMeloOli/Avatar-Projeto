@@ -1,0 +1,46 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.tela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+
+}
+
+.game {
+    height: 100%;
+    background-color: black;
+    display: flex;
+}
+
+#choice1 {
+    border-right: white solid 1px;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#choice2 {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: aliceblue;
+    color: black;
+    display: none;
+
+}
