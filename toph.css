@@ -4,7 +4,7 @@ html {
     margin: 0;
 }
 
-.tela {
+.start {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,17 +12,50 @@ html {
     height: 100%;
     opacity: 1;
     transition: opacity 0.1s ease-in-out;
+    background-image: url(assets/tophfund.jpg);
+    background-size: cover;
+    background-position: center;
+    color: black;
+    font-family: "Nabla", system-ui;
+
+}
+
+.content-txt {
+    text-align: center;
+    position: absolute;
+}
+
+.title-start {
+
+    font-size: 4rem;
+
+}
+
+.txt-start {
+
+    font-size: 2rem;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
 
 }
 
 .game {
     height: 100%;
-    background-color: black;
+    background: linear-gradient(to bottom, rgb(0, 128, 0), rgb(255, 255, 255), rgb(0, 0, 0));
+    animation: changeColor 10s linear infinite alternate;
     display: flex;
 }
 
+
+
 #choice1 {
-    border-right: white solid 1px;
+
     height: 100vh;
     width: 50vw;
     display: flex;
@@ -39,8 +72,48 @@ html {
 }
 
 .btn {
-    background-color: aliceblue;
-    color: black;
-    display: none;
 
+    display: none;
+    background-image: url(assets/toupeiras-texugo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 45vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: top 1rem;
+    transition: 0.5s ease;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+#scoreboard {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 11vh;
+    width: 15vw;
+    line-height: 11vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    background-color: white;
+    border: 3px solid rgb(0, 67, 0);
+    border-radius: 0.5rem;
+}
+
+#msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    text-align: center;
 }

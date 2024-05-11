@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="audio()"></button>
+</body>
+
+</html>
+<script>
+    function audio() {
+        let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+
+        let audioElement = new Audio('assets/agniKaiTheme.mp3');
+        let audioSource = audioContext.createMediaElementSource(audioElement); // Carregar o áudio
+
+        let splitter = audioContext.createChannelSplitter(2);  // Dividir o áudio nos 2 lados
+        let merger = audioContext.createChannelMerger(2);
+
+        let gainNode = audioContext.createGain();
+
+
+
+        audioSource.connect(gainNode);  // Conectar volume com a saida
+        gainNode.connect(audioContext.destination);
+
+
+        gainNode.gain.value = 0.1;
+
+        audioSource.connect(splitter);
+        splitter.connect(merger, 0, 1);
+        merger.connect(audioContext.destination);
+
+
+        audioElement.play();
+    }
+
+</script>

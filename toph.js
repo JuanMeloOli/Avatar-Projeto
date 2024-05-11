@@ -8,7 +8,7 @@ function mostrarTela2() {
   reproduzirMusica();
 }
 var pontuacao = 0;
-var jogadasRestantes = 10;
+var jogadasRestantes = 7;
 
 function sorteio() {
   var numeroAleatorio = Math.random();
@@ -16,48 +16,80 @@ function sorteio() {
 }
 
 function reproduzirMusica() {
-  var audio = new Audio();
-  audio.src = "assets/agniKaiTheme.mp3";
-
+  msg.innerHTML = `Escute o Som 🔊`;
   var ladoSorteado = sorteio();
-  audio.pan = sorteio();
+  let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  let audio = "";
+  if (jogadasRestantes == 5 || jogadasRestantes == 2) {
+    audio = new Audio("assets/watermove.mp3");
+  } else if (jogadasRestantes == 4 || jogadasRestantes == 7) {
+    audio = new Audio("assets/fireballsound.mp3");
+  } else {
+    audio = new Audio("assets/running.mp3");
+  }
+
+  let audioSource = audioContext.createMediaElementSource(audio); // Carregar o áudio
+
+  let splitter = audioContext.createChannelSplitter(2); // Dividir o áudio nos 2 lados
+  let merger = audioContext.createChannelMerger(2);
+
+  let gainNode = audioContext.createGain();
+
+  audioSource.connect(gainNode); // Conectar volume com a saida
+  gainNode.connect(audioContext.destination);
+
+  gainNode.gain.value = 0;
+
+  audioSource.connect(splitter);
+  if (ladoSorteado == 1) {
+    splitter.connect(merger, 1, 0);
+  } else {
+    splitter.connect(merger, 0, 1);
+  }
+
+  merger.connect(audioContext.destination);
+
   audio.play();
+
   setTimeout(function () {
+    msg.style.display = "none";
     audio.pause();
     btnLeft.style.display = "flex";
     btnRight.style.display = "flex";
-    document.getElementById("choice1").onclick = function () {
+    document.getElementById("btnLeft").onclick = function () {
       escolherLado(1, ladoSorteado);
     };
-    document.getElementById("choice2").onclick = function () {
+    document.getElementById("btnRight").onclick = function () {
       escolherLado(-1, ladoSorteado);
     };
-  }, 10000);
+  }, 3000);
 }
 
 function escolherLado(ladoEscolhido, ladoSorteado) {
+  msg.style.display = "flex";
+  jogadasRestantes--;
   if (ladoEscolhido == ladoSorteado) {
     pontuacao++;
-  }
-  jogadasRestantes--;
-  if (jogadasRestantes === 0) {
-    alert("Fim do jogo! Sua pontuação final é: " + pontuacao);
-    document.getElementById("tela2").style.display = "none";
+    msg.innerHTML = `Você Acertou! Faltam ${jogadasRestantes} jogadas`;
   } else {
-    alert(
-      "Jogada " +
-        (10 - jogadasRestantes) +
-        ": Sua pontuação atual é: " +
-        pontuacao
-    );
-    // Reinicio
+    msg.innerHTML = `Você Errou! Faltam ${jogadasRestantes} jogadas`;
+  }
+
+  if (jogadasRestantes === 0) {
+    scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
     btnLeft.style.display = "none";
     btnRight.style.display = "none";
-    reproduzirMusica();
+    msg.innerHTML = `Fim do jogo! Sua pontuação final é de: ${pontuacao} acertos`;
+    setTimeout(function () {
+      window.location.href = "earth-toph.html";
+    }, 3000);
+  } else {
+    scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
+    btnLeft.style.display = "none";
+    btnRight.style.display = "none";
+    setTimeout(function () {
+      // Reinicio
+      reproduzirMusica();
+    }, 3000);
   }
-  atualizarPontuacao();
-}
-
-function atualizarPontuacao() {
-  alert("Pontuação: " + pontuacao);
 }

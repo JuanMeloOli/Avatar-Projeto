@@ -4,24 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
     <title>Toph Game</title>
     <link rel="stylesheet" href="toph.css">
 </head>
 
 <body>
-    <div id="start" class="tela" onclick="mostrarTela2()">
-        <h1>Clique em qualquer lugar para jogar</h1>
-        <p>Utilize fones de ouvido</p>
-    </div>
+    <section id="start" class="start" onclick="mostrarTela2()">
+        <div class="overlay"></div>
+        <div class="content-txt">
+            <h1 class="title-start">Clique em qualquer lugar para jogar</h1>
+            <p class="txt-start">Utilize fones de ouvido</p>
+        </div>
+    </section>
 
-    <div id="tela2" class="game" style="display: none;">
+    <section id="tela2" class="game" style="display: none;">
         <div id="choice1">
-            <span id="btnLeft" class="btn">Left</span>
+            <div id="btnLeft" class="btn" style="display: none;"><span>Left</span></div>
         </div>
+
+        <span id="scoreboard">Pontuação: 0</span>
+        <span id="msg">Escute o Som 🔊 </span>
         <div id="choice2">
-            <span id="btnRight" class="btn">Right</span>
-        </div>
-    </div>
+            <div id="btnRight" class="btn" style="display: none;"><span>Right</span></div>
+        </div>-
+    </section>
     <script src="toph.js"></script>
 </body>
 
