@@ -74,6 +74,9 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
   } else {
     msg.innerHTML = `Você Errou! Faltam ${jogadasRestantes} jogadas`;
   }
+  scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
+  btnLeft.style.display = "none";
+  btnRight.style.display = "none";
 
   if (jogadasRestantes === 0) {
     scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
@@ -83,13 +86,9 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
     setTimeout(function () {
       window.location.href = "earth-toph.html";
     }, 3000);
-  } else {
-    scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
-    btnLeft.style.display = "none";
-    btnRight.style.display = "none";
-    setTimeout(function () {
-      // Reinicio
-      reproduzirMusica();
-    }, 3000);
   }
+  setTimeout(function () {
+    // Reinicio
+    reproduzirMusica();
+  }, 3000);
 }

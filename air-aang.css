@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(251, 254, 205);
+}
+
+.High {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/spirit-world-avatar.jpg);
+    background-size: cover;
+
+}
+
+
+
+.cycle-avatar {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    text-align: center;
+    background-color: black;
+
+}
+
+.cycle-avatar div {
+    height: 100vh;
+    width: 50vw;
+}
+
+.cycle-img {
+    background-image: url(assets/cicloAvatar.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+.latest-avatars {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+.box-card {
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    height: 100%;
+    width: 25%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s ease;
+}
+
+
+
+.kyoshi-card {
+    background-image: url(assets/KyoshiCard.jpg);
+
+
+}
+
+.roku-card {
+    background-image: url(assets/RokuCard.jpg);
+}
+
+.aang-card {
+    background-image: url(assets/AangCard\ .jpg);
+}
+
+.korra-card {
+    background-image: url(assets/korracard.jpg);
+}
+
+.origin {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.flip-card {
+    height: 65vh;
+    width: 20vw;
+    background-color: transparent;
+    perspective: 1000px;
+    /* Adiciona perspectiva para o efeito 3D */
+
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow-y: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    /* Inicia a face traseira virada para trás */
+
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    /* Rotaciona o cartão ao passar o mouse */
+
+}
+
+.flip-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
