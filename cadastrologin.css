@@ -15,6 +15,8 @@
     background-color: #0e0d0d;
     color: #fff;
     font-size: 1.2rem;
+   
+
 }
 
 .login-title {
@@ -37,13 +39,12 @@
 }
 
 .first-wall {
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .second-wall {
-    background: url();
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -114,7 +115,7 @@
 
 .overlay {
     position: absolute;
-    background-image: url(assets/kataraArt.jpg);
+    
     transform: translate(100%);
     background-repeat: no-repeat;
     background-size: cover;
