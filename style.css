@@ -669,8 +669,8 @@ nav a:hover {
 }
 
 .login-card{
-    height: 25vh;
-    width: 35vw;
+    height: 30vh;
+    width: 25vw;
     background-color: #000;
     border: 4px solid white;
     border-radius: 3rem;
@@ -678,23 +678,23 @@ nav a:hover {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color: #fff;
 }
 
 .txt-card-login{
-    height: 15vh;
+    height: 20vh;
     width: 100%;
     color: #fff;
     text-align: center;
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-around;
     flex-direction: column;
+    align-items: center;
 }
 
 .txt-card-login p{
     font-size: 1.5rem;
-    text-align: left;
-    margin-left: 3rem;
+
 }
 
 
@@ -705,6 +705,27 @@ nav a:hover {
 }
 
 .button-card-login{
-    height: 10vh;
+    height: 5vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
+
+.alert:hover{
+    color: #d10101;
+}
+
+.button-water{
+    font-size: 1rem;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.7rem;
+    color: #fff;
+    background-image: linear-gradient(rgb(0, 0, 90), rgb(0, 0, 90));
+    border: 2px solid rgb(0, 0, 230);
+    border-bottom: 0.3rem solid rgb(0, 0, 230);
+    box-shadow: 0 0.7rem 1rem 0.2rem #3801ff;
+    text-decoration: none;
+}
+
