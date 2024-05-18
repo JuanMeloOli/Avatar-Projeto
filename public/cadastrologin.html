@@ -2,163 +2,168 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cadastrologin.css">
-    <title>Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/cadastrologin.css">
+  <title>Register</title>
 </head>
 
 <body>
-    <div class="content">
-        <div class="overlay" id="overlay"></div>
-        <div class="wall first-wall">
-            <h1 class="login-title">Login</h1>
-            <div class="inputForm">
-                <span>Email</span>
-                <input type="email" id="input_email">
-            </div>
+  <div class="content">
+    <div class="overlay" id="overlay"></div>
+    <div class="wall first-wall">
+      <h1 class="login-title">Login</h1>
+      <div class="inputForm">
+        <span>Email</span>
+        <input type="email" id="input_email_log">
+      </div>
 
-            <div class="inputForm">
-                <span>Senha</span>
-                <input type="password" id="input_password">
-            </div>
-            <button class="btn signIn">Acessar</button>
-            <span>Você não tem uma conta? <span class="blue" onclick="mudar()">Cadastrar</span></span>
-
-        </div>
-        <div class="wall second-wall">
-
-            <h1 class="register-title">Cadastro</h1>
-            <div class="inputForm">
-                <span>Nome</span>
-                <input type="text" id="input_name">
-            </div>
-
-
-            <div class="inputForm">
-                <span>Email</span>
-                <input type="email" id="input_email">
-            </div>
-
-            <div class="inputForm">
-                <span>Senha</span>
-                <input type="password" id="input_password">
-            </div>
-
-
-            <span>Qual sua Dobra Favorita?</span>
-            <form class="dobraForm">
-                <input type="radio" id="fogo" name="dobra" value="fogo">
-                <label for="fogo">Fogo</label><br>
-                <input type="radio" id="agua" name="dobra" value="agua">
-                <label for="agua">Água</label><br>
-                <input type="radio" id="terra" name="dobra" value="terra">
-                <label for="terra">Terra</label><br>
-                <input type="radio" id="ar" name="dobra" value="ar">
-                <label for="ar">Ar</label><br><br>
-            </form>
-            <button class="btn signUp" onclick="cadastrar()">Cadastrar</button>
-            <span>Você já tem uma conta? <span class="red" onclick="mudar2()">Fazer login</span></span>
-
-        </div>
-
-
-
+      <div class="inputForm">
+        <span>Senha</span>
+        <input type="password" id="input_password_log">
+      </div>
+      <button class="btn signIn">Acessar</button>
+      <span>Você não tem uma conta? <span class="blue" onclick="mudar()">Cadastrar</span></span>
 
     </div>
+    <div class="wall second-wall">
+
+      <h1 class="register-title">Cadastro</h1>
+      <div class="inputForm">
+        <span>Nome</span>
+        <input type="text" id="input_name">
+      </div>
+
+
+      <div class="inputForm">
+        <span>Email</span>
+        <input type="email" id="input_email">
+      </div>
+
+      <div class="inputForm">
+        <span>Senha</span>
+        <input type="password" id="input_password">
+      </div>
+
+      <div class="inputForm">
+        <span>Confirmação de Senha</span>
+        <input type="password" id="input_confirm">
+      </div>
+
+
+      <span>Qual sua Dobra Favorita?</span>
+      <form id="dobraForm" class="dobraForm">
+        <input type="radio" id="fogo" name="dobra" value="fogo">
+        <label for="fogo">Fogo</label><br>
+        <input type="radio" id="agua" name="dobra" value="agua">
+        <label for="agua">Água</label><br>
+        <input type="radio" id="terra" name="dobra" value="terra">
+        <label for="terra">Terra</label><br>
+        <input type="radio" id="ar" name="dobra" value="ar">
+        <label for="ar">Ar</label><br><br>
+      </form>
+      <button class="btn signUp" onclick="cadastrar()">Cadastrar</button>
+      <span>Você já tem uma conta? <span class="red" onclick="mudar2()">Fazer login</span></span>
+
+    </div>
+
+
+
+
+  </div>
 </body>
 
 </html>
 <script src="js/cadastrologin.js"></script>
 <script>
-    
-    function cadastrar() {
-      aguardar();
-  
-      //Recupere o valor da nova input pelo nome do id
-      // Agora vá para o método fetch logo abaixo
-      var nomeVar = nome_input.value;
-      var emailVar = email_input.value;
-      var senhaVar = senha_input.value;
-      var confirmacaoSenhaVar = confirmacao_senha_input.value;
-      var empresaVar = listaEmpresas.value
 
-      if (
-        nomeVar == "" ||
-        emailVar == "" ||
-        senhaVar == "" ||
-        confirmacaoSenhaVar == "" ||
-        empresaVar == ""
-      ) {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML =
-          "(Mensagem de erro para todos os campos em branco)";
-  
-        finalizarAguardar();
-        return false;
-      } else {
-        setInterval(sumirMensagem, 5000);
-      }
-  
-      // Enviando o valor da nova input
-      fetch("/usuarios/cadastrar", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          // crie um atributo que recebe o valor recuperado aqui
-          // Agora vá para o arquivo routes/usuario.js
-          nomeServer: nomeVar,
-          emailServer: emailVar,
-          senhaServer: senhaVar,
-          empresaServer: empresaVar
-        }),
-      })
-        .then(function (resposta) {
-          console.log("resposta: ", resposta);
-  
-          if (resposta.ok) {
-            cardErro.style.display = "block";
-  
-            mensagem_erro.innerHTML =
-              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-  
-            setTimeout(() => {
-              window.location = "login.html";
-            }, "2000");
-  
-            limparFormulario();
-            finalizarAguardar();
-          } else {
-            throw "Houve um erro ao tentar realizar o cadastro!";
-          }
-        })
-        .catch(function (resposta) {
-          console.log(`#ERRO: ${resposta}`);
-          finalizarAguardar();
-        });
-  
+  function cadastrar() {
+    aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = input_name.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_password.value;
+    var confirmacaoSenhaVar = input_confirm.value;
+    var dobraVar = dobraForm.value
+
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == "" ||
+      dobraVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+
+      finalizarAguardar();
       return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
     }
-  
-    function listar() {
-      fetch("/empresas/listar", {
-        method: "GET",
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        dobraServer: dobraVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
       })
-        .then(function (resposta) {
-          resposta.json().then((empresas) => {
-            empresas.forEach((empresa) => {
-              listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-            });
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function listar() {
+    fetch("/empresas/listar", {
+      method: "GET",
+    })
+      .then(function (resposta) {
+        resposta.json().then((empresas) => {
+          empresas.forEach((empresa) => {
+            listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
           });
-        })
-        .catch(function (resposta) {
-          console.log(`#ERRO: ${resposta}`);
         });
-    }
-  
-    function sumirMensagem() {
-      cardErro.style.display = "none";
-    }
-  </script>
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>
