@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/water-quiz.css">
+    <script src="js/water-quiz.js" async></script>
+    <title>Quiz Avatar</title>
 </head>
 
 <body>
-    <section class="questions">
-        <h1>Quem é o mais forte?</h1>
-    </section>
-    <section class="options">
-        <ul>
-            <li>A.</li>
-            <li>B.</li>
-            <li>C.</li>
-            <li>D.</li>
-        </ul>
+    <video autoplay loop class="bg-water" src="assets/BackgroundWater.mp4"></video>
+
+    <section class="container">
+        <div class="questions-container hide">
+            <span class="question">Pergunta aqui?</span>
+            <div class="answers-container">
+                <button class="answer button">resposta 01</button>
+                <button class="answer button">resposta 02</button>
+                <button class="answer button">resposta 03</button>
+                <button class="answer button">resposta 04</button>
+            </div>
+        </div>
+        <div class="controls-container">
+            <button class="next-question button hide">Próxima Pergunta</button>
+            <button class="start-quiz button">Começar Quiz</button>
+        </div>
     </section>
 </body>
 
