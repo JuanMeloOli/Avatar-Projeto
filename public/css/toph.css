@@ -12,7 +12,7 @@ html {
     height: 100%;
     opacity: 1;
     transition: opacity 0.1s ease-in-out;
-    background-image: url(assets/tophfund.jpg);
+    background-image: url(/public/assets/tophfund.jpg);
     background-size: cover;
     background-position: center;
     color: black;
@@ -74,7 +74,7 @@ html {
 .btn {
 
     display: none;
-    background-image: url(assets/toupeiras-texugo.png);
+    background-image: url(/public/assets/toupeiras-texugo.png);
     background-size: cover;
     background-position: center;
     background-repeat: repeat;

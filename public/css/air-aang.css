@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(assets/avataresUnidos.jpg);
+    background-image: url(/public/assets/avataresUnidos.jpg);
     background-size: cover;
 
 }
@@ -51,7 +51,7 @@ body {
 
 
 .cycle-img {
-    background-image: url(assets/cicloBlack.jpg);
+    background-image: url(/public/assets/cicloBlack.jpg);
    
     background-position: center;
     background-size: contain;
@@ -93,21 +93,21 @@ body {
 
 
 .kyoshi-card {
-    background-image: url(assets/KyoshiCard.jpg);
+    background-image: url(/public/assets/KyoshiCard.jpg);
 
 
 }
 
 .roku-card {
-    background-image: url(assets/RokuCard.jpg);
+    background-image: url(/public/assets/RokuCard.jpg);
 }
 
 .aang-card {
-    background-image: url(assets/AangCard\ .jpg);
+    background-image: url(/public/assets/AangCard\ .jpg);
 }
 
 .korra-card {
-    background-image: url(assets/korracard.jpg);
+    background-image: url(/public/assets/korracard.jpg);
 }
 
 .origin {
@@ -182,20 +182,20 @@ body {
 }
 
 .toupeira-img{
-    background-image: url(assets/cardToupeira.jpg);
+    background-image: url(/public/assets/cardToupeira.jpg);
     
 }
 
 .bisao-img{
-    background-image: url(assets/AppaGiant.png);
+    background-image: url(/public/assets/AppaGiant.png);
 }
 
 .moon{
-    background-image: url(assets/MoonSea.jpg);
+    background-image: url(/public/assets/MoonSea.jpg);
 }
 
 .dragon{
-    background-image: url(assets/DragonFire.webp);
+    background-image: url(/public/assets/DragonFire.webp);
 }
 
 .title-txt{
