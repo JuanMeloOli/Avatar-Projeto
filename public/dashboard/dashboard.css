@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu {
+    left: 0;
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.user {
+    height: 40vh;
+    width: 20vw;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.photo {
+    margin-top: 2rem;
+    height: 25vh;
+    width: 25vh;
+    background-image: url(/public/assets/perfilIcon.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 360px;
+    border: 1px solid black;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vh;
+    height: 10vh;
+    padding: 2vh;
+    gap: 0.5rem;
+}
+
+.btn-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
+    width: 20vw;
+}
+
+.button-data {
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vw;
+    font-size: 1.5rem;
+
+}
+
+.button-style {
+    height: 10vh;
+    width: 20vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vw;
+    font-size: 1.5rem;
+
+}
+
+.button-exit {
+    height: 10vh;
+    width: 20vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vw;
+    font-size: 1.5rem;
+
+}
+
+.data {
+    margin-left: 20vw;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+}
+
+
+.mid {
+    width: 60vw;
+    height: 100vh;
+}
+
+
+
+.high-kpis {
+    width: 60vw;
+    height: 35vh;
+    background-color: blue;
+}
+
+.kpi-fire {
+    width: 30vw;
+    height: 35vh;
+    border: 1px solid black;
+}
+
+.kpi-earth {
+    width: 30vw;
+    height: 35vh;
+    border: 1px solid black;
+}
+
+
+.quiz-performance {
+    width: 60vw;
+    height: 65vh;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border: 5px solid black;
+}
+
+
+
+.kpi-dobra {
+    width: 20vw;
+    height: 100vh;
+    background-color: chocolate;
+}
+
+
+
+.personal {
+    margin-left: 20vw;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(180deg, #ffffff, #ff0000);
+}
+
+.btn-personal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-card {
+    height: 30vh;
+    width: 30vw;
+    background-image: url(/public/assets/grupoAvatarNew.webp);
+    background-position: center;
+    background-size: cover;
+    font-family: "Honk", system-ui;
+    font-weight: bold;
+    border-radius: 3rem;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 3rem;
+    border: 4px solid #fff;
+    transition: 0.5s;
+}
+
+.btn-card:hover {
+    filter: brightness(0.8);
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.content-name {
+    margin-left: 20vw;
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputForm {
+    display: flex;
+    width: 25rem;
+    flex-direction: column;
+
+
+}
+
+.inputForm input {
+    border: 0;
+    border-bottom: 1px solid var(--red);
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 2rem;
+    color: #000000;
+    font-size: 1.3rem;
+}
+
+.first-wall .inputForm input {
+    border-bottom: 1px solid rgb(5, 5, 190);
+}
+
+.inputForm span {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1.2rem;
+}
+
+.inputForm input:focus {
+    outline: none;
+    background: linear-gradient(to bottom, rgb(5, 5, 190, 0.1), rgb(5, 5, 190, 0.1), rgba(5, 5, 190, 0.4));
+    border-bottom: 2px solid rgb(5, 5, 190);
+}

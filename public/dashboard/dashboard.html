@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js" async></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="menu">
+        <div class="user">
+            <div class="photo"></div>
+            <div class="account">
+                <span>Usuário</span>
+                <span>Usuário@email.com</span>
+            </div>
+        </div>
+        <div class="btn-user">
+            <div class="button-data"><span class="material-icons">bar_chart</span><span>Dados</span></div>
+            <div class="button-style"><span class="material-icons">format_paint</span><span>Personalizar</span></div>
+            <div class="button-exit"><span class="material-icons">logout</span> <span>Sair</span></div>
+        </div>
+    </section>
+    <section class="data">
+        <div class="mid">
+            <section class="high-kpis">
+                <section class="kpi-fire"></section>
+                <section class="kpi-earth"></section>
+            </section>
+            <section class="quiz-performance">
+                <canvas id="dash" class="dash"></canvas>
+            </section>
+        </div>
+        <section class="kpi-dobra"></section>
+    </section>
+</body>
+
+</html>
