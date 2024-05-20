@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="dashboard.js" async></script>
     <link rel="stylesheet" href="dashboard.css">
-    <title>Document</title>
+    <title>Painel</title>
 </head>
 
 <body>
@@ -21,23 +21,103 @@
             </div>
         </div>
         <div class="btn-user">
-            <div class="button-data"><span class="material-icons">bar_chart</span><span>Dados</span></div>
-            <div class="button-style"><span class="material-icons">format_paint</span><span>Personalizar</span></div>
-            <div class="button-exit"><span class="material-icons">logout</span> <span>Sair</span></div>
+            <a href="#data" class="button-data userBtn"><span
+                    class="material-icons">bar_chart</span><span>Dados</span></a>
+            <a href="#personal" class="button-style userBtn"><span
+                    class="material-icons">format_paint</span><span>Personalizar</span></a>
+            <div class="button-exit userBtn"><span class="material-icons">logout</span> <span>Sair</span></div>
         </div>
     </section>
-    <section class="data">
-        <div class="mid">
-            <section class="high-kpis">
-                <section class="kpi-fire"></section>
-                <section class="kpi-earth"></section>
+    <div class="info">
+        <section id="data" class="data-content">
+            <div class="mid">
+                <section class="high-kpis">
+                    <section class="kpi-fire">
+                        <div class="high-txt high-red">Vitórias em Agni Kai</div>
+                        <div class="high-data">12</div>
+                    </section>
+                    <section class="kpi-earth">
+                        <div class="high-txt high-green">Vitórias em Toph Game</div>
+                        <div class="high-data">19</div>
+                    </section>
+                </section>
+                <section class="quiz-performance">
+                    <canvas id="dash" class="dash"></canvas>
+                </section>
+            </div>
+            <section class="kpi-dobra">
+                <h1 class="txt-dobra">Dobra Favorita</h1>
+                <div class="dobra-info">
+                    <canvas id="dobraChart"></canvas>
+                </div>
+                <div class="dobra-legend">
+                    <div class="container-legend"><span>Fogo:</span>
+                        <div class="fire-square square"></div>
+                    </div>
+                    <div class="container-legend"><span>Ar:</span>
+                        <div class="air-square square"></div>
+                    </div>
+                    <div class="container-legend"><span>Água:</span></span>
+                        <div class="water-square square"></div>
+                    </div>
+                    <div class="container-legend"><span>Terra:</span>
+                        <div class="earth-square square"></div>
+                    </div>
+                </div>
             </section>
-            <section class="quiz-performance">
-                <canvas id="dash" class="dash"></canvas>
+        </section>
+
+        <section id="personal" class="personal-content">
+            <section class="personal">
+                <div class="btn-personal">
+                    <div class="tradeName btn-card">Mudar Nome</div>
+                    <div class="tradePicture  btn-card">Mudar Foto</div>
+                </div>
             </section>
-        </div>
-        <section class="kpi-dobra"></section>
-    </section>
+            <section class="content-name">
+
+                <div class="over"></div>
+                <div class="trade-name">
+                    <div class="exit-content_2">
+                        <button class="exit-personal_2 back"></button>
+                    </div>
+                    <div class=" inputForm">
+                        <input type="text" id="input_name">
+                        <button class="submit">Trocar Nome</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-picture">
+                <div class="exit-content">
+                    <button class="exit-personal back"></button>
+                </div>
+                <h1 class="msg-picture">Escolha seu novo Avatar</h1>
+                <section class="pictures">
+                    <label>
+                        <input type="radio" name="avatar" class="aang-picture picture">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" class="katara-picture picture">
+
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" class="sokka-picture picture">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" class="toph-picture picture">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" class="zuko-picture picture">
+                    </label>
+                </section>
+                <button id="bottonAvatar"><strong>Trocar Avatar</strong></button>
+
+            </section>
+        </section>
+
+    </div>
+
 </body>
 
 </html>

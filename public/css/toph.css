@@ -16,38 +16,55 @@ html {
     background-size: cover;
     background-position: center;
     color: black;
-    font-family: "Nabla", system-ui;
 
+}
+
+.exit-button {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    color: #fff;
+    padding: 0 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.exit-button:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 .content-txt {
     text-align: center;
     position: absolute;
+    font-family: "Nabla", system-ui;
 }
 
 .title-start {
 
-    font-size: 4rem;
+    font-size: 5.5rem;
 
 }
 
 .txt-start {
 
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 .overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent, transparent, transparent, rgba(0, 0, 0, 1));
 
 
 }
 
 .game {
     height: 100%;
-    background: linear-gradient(to bottom, rgb(0, 128, 0), rgb(255, 255, 255), rgb(0, 0, 0));
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 128, 0), rgb(0, 0, 0));
     animation: changeColor 10s linear infinite alternate;
     display: flex;
 }
@@ -85,7 +102,12 @@ html {
     align-items: top 1rem;
     transition: 0.5s ease;
     font-size: 5rem;
-    color: rgb(255, 255, 255);
+    color: #fff;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
 }
 
 .btn:hover {
@@ -116,4 +138,10 @@ html {
     transform: translate(-50%, -50%);
     font-size: 5rem;
     text-align: center;
+    color: #fff;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
 }

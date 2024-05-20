@@ -52,6 +52,23 @@ h1 {
     align-items: center;
 }
 
+.exit-button {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    color: #fff;
+    padding: 0 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.exit-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 .questions-container {
     width: 100%;
     display: flex;

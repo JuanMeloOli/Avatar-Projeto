@@ -70,9 +70,13 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
   jogadasRestantes--;
   if (ladoEscolhido == ladoSorteado) {
     pontuacao++;
-    msg.innerHTML = `Você Acertou! Faltam ${jogadasRestantes} jogadas`;
+    msg.innerHTML = `Você Acertou!<br> Faltam ${jogadasRestantes} jogadas`;
   } else {
-    msg.innerHTML = `Você Errou! Faltam ${jogadasRestantes} jogadas`;
+    msg.innerHTML = `Você Errou!<br> Pontuação final: 0${pontuacao} <br>
+    Tente Novamente!`;
+    setTimeout(function () {
+      window.location.href = "earth-toph.html";
+    }, 3000);
   }
   scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
   btnLeft.style.display = "none";
@@ -82,7 +86,7 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
     scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
     btnLeft.style.display = "none";
     btnRight.style.display = "none";
-    msg.innerHTML = `Fim do jogo! Sua pontuação final é de: ${pontuacao} acertos`;
+    msg.innerHTML = `Pontuação final: ${pontuacao}<br>`;
     setTimeout(function () {
       window.location.href = "earth-toph.html";
     }, 3000);

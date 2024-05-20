@@ -4,6 +4,7 @@ const answersContainer = document.querySelector(".answers-container");
 const questionText = document.querySelector(".question");
 const nextQuestionButton = document.querySelector(".next-question");
 const container = document.querySelector(".container");
+const exitButton = document.querySelector(".exit-button");
 
 startGameButton.addEventListener("click", startGame);
 nextQuestionButton.addEventListener("click", displayNextQuestion);
@@ -14,6 +15,7 @@ let totalCorrect = 0;
 function startGame(params) {
   startGameButton.classList.add("hide");
   questionsContainer.classList.remove("hide");
+  exitButton.classList.add("hide");
 
   displayNextQuestion();
 }

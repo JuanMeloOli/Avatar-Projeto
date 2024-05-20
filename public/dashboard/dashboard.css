@@ -4,6 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+a {
+    color: #000;
 }
 
 body {
@@ -12,6 +18,7 @@ body {
     background-color: aquamarine;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 
@@ -21,6 +28,7 @@ body {
     width: 20vw;
     height: 100vh;
     background-color: rgb(255, 255, 255);
+    border-right: #000 5px solid;
 }
 
 .user {
@@ -31,6 +39,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    border-right: #000 5px solid;
 
 }
 
@@ -102,7 +111,18 @@ body {
 
 }
 
-.data {
+.userBtn:hover {
+    color: #a10000;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.data-content {
     margin-left: 20vw;
     width: 80vw;
     height: 100vh;
@@ -119,47 +139,159 @@ body {
 
 .high-kpis {
     width: 60vw;
-    height: 35vh;
+    height: 40vh;
     background-color: blue;
+    display: flex;
+}
+
+.high-txt {
+    text-align: center;
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 2rem;
+    border-bottom: 2px solid black;
+    color: #fff;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+.high-red {
+    background-color: rgb(100, 0, 0);
+}
+
+.high-green {
+    background-color: rgb(0, 60, 0);
+}
+
+.high-data {
+    height: 30vh;
+    line-height: 30vh;
+    font-size: 8rem;
+    text-align: center;
+    color: #fff;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
 }
 
 .kpi-fire {
     width: 30vw;
-    height: 35vh;
+    height: 40vh;
     border: 1px solid black;
+    background-color: rgb(255, 0, 0);
 }
 
 .kpi-earth {
     width: 30vw;
-    height: 35vh;
+    height: 40vh;
     border: 1px solid black;
+    background-color: rgb(0, 128, 0);
 }
 
 
 .quiz-performance {
     width: 60vw;
-    height: 65vh;
-    background-color: rgb(255, 255, 255);
+    height: 60vh;
     padding: 2rem;
-    border: 5px solid black;
+    background-color: rgba(2, 204, 204, 0.8);
+
 }
 
-
+/* KPI DE DOBRA FAVORITA   */
 
 .kpi-dobra {
     width: 20vw;
     height: 100vh;
-    background-color: chocolate;
+    background-color: rgb(0, 0, 0);
+}
+
+.txt-dobra {
+    text-align: center;
+    line-height: 10vh;
+    color: #000;
+    height: 10vh;
+    font-size: 2.5rem;
+    text-shadow:
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+}
+
+.dobra-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    height: 40vh;
+    padding: 1rem;
 }
 
 
+.dobra-legend {
+    height: 50vh;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
 
-.personal {
+    margin-left: 3rem;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.container-legend {
+    height: 10vh;
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.square {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+}
+
+.fire-square {
+    background-color: red;
+}
+
+.air-square {
+    background-color: white;
+}
+
+.water-square {
+    background-color: blue;
+}
+
+.earth-square {
+    background-color: green;
+}
+
+
+.personal-content {
     margin-left: 20vw;
     width: 80vw;
     height: 100vh;
     display: flex;
-    background: linear-gradient(180deg, #ffffff, #ff0000);
+}
+
+
+.personal {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    background: url(/public/assets/dropAir.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .btn-personal {
@@ -193,19 +325,48 @@ body {
 }
 
 .content-name {
-    margin-left: 20vw;
     width: 80vw;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #000;
     display: none;
     justify-content: center;
+    align-items: top;
+
+
+
+
+}
+
+.trade-name {
+    width: 40vw;
+    height: 80vh;
+    display: flex;
     align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+
+}
+
+.over {
+    width: 40vw;
+    height: 100vh;
+
+    background-image: url(/public/assets/aangDesperto.jpg);
+    background-position: left;
+    background-size: cover;
+
+
+    border-right: 5px solid black;
 }
 
 .inputForm {
     display: flex;
+    height: 80vh;
     width: 25rem;
     flex-direction: column;
+    justify-content: center;
+
+
 
 
 }
@@ -213,14 +374,15 @@ body {
 .inputForm input {
     border: 0;
     border-bottom: 1px solid var(--red);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
     height: 2rem;
-    color: #000000;
+    color: #fff;
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .first-wall .inputForm input {
-    border-bottom: 1px solid rgb(5, 5, 190);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .inputForm span {
@@ -230,6 +392,156 @@ body {
 
 .inputForm input:focus {
     outline: none;
-    background: linear-gradient(to bottom, rgb(5, 5, 190, 0.1), rgb(5, 5, 190, 0.1), rgba(5, 5, 190, 0.4));
-    border-bottom: 2px solid rgb(5, 5, 190);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.submit {
+    background-color: #fff;
+    color: #000;
+}
+
+.content-picture {
+    width: 80vw;
+    height: 100vh;
+    background: url(/public/assets/dropAir.jpg);
+    background-position: center;
+    background-size: cover;
+    display: none;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+}
+
+.msg-picture {
+    padding: 0.5rem;
+    border-radius: 3rem;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.pictures {
+    margin-top: 15vh;
+    height: 40vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.picture {
+    height: 25vh;
+    width: 25vh;
+    border: 2px solid black;
+    border-radius: 360px;
+    background-position: center;
+    background-size: cover;
+}
+
+.aang-picture {
+    background-image: url(/public/assets/aangIcon.jpg);
+}
+
+.katara-picture {
+    background-image: url(/public/assets/kataraIcon.jpg);
+}
+
+.sokka-picture {
+    background-image: url(/public/assets/sokkaIcon.jpg);
+}
+
+.toph-picture {
+    background-image: url(/public/assets/TophIcon.jpg)
+}
+
+.zuko-picture {
+    background-image: url(/public/assets/zukoIcon.jpg)
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25vh;
+    height: 25vh;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Estiliza o input quando está selecionado */
+input[type="radio"]:checked {
+    border: 3px solid red;
+}
+
+#bottonAvatar {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: rgb(137, 3, 3);
+    border: #000 solid 2px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#bottonAvatar:hover {
+    box-shadow: 7px 5px 56px -14px #d90000;
+    background: #fff;
+    color: #000;
+}
+
+#bottonAvatar:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #ff0101;
+}
+
+
+
+.exit-content {
+    height: 20vh;
+    width: 80vw;
+    display: flex;
+    justify-content: right;
+
+}
+
+.exit-personal {
+    background-image: url(/public/assets/cancelICon.svg);
+    height: 10vh;
+    width: 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: 0;
+
+}
+
+.exit-content_2 {
+    height: 20vh;
+    width: 40vw;
+    display: flex;
+    justify-content: right;
+    align-items: top;
+
+}
+
+.exit-personal_2 {
+    background-image: url(/public/assets/cancelICon.svg);
+    height: 10vh;
+    width: 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: 0;
+
+
+}
+
+.back:hover {
+    transform: scale(0.8);
+    cursor: pointer;
 }
