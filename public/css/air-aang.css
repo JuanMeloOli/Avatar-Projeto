@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(/public/assets/dropAir.jpg);
+    background-image: url(../assets/dropAir.jpg);
     background-size: cover;
     color: #fff;
     text-shadow:
@@ -91,7 +91,7 @@
 
 
 .cycle-img {
-    background-image: url(/public/assets/cicloBlack.jpg);
+    background-image: url(../assets/cicloBlack.jpg);
 
     background-position: center;
     background-size: contain;
@@ -133,21 +133,21 @@
 
 
 .kyoshi-card {
-    background-image: url(/public/assets/KyoshiCard.jpg);
+    background-image: url(../assets/KyoshiCard.jpg);
 
 
 }
 
 .roku-card {
-    background-image: url(/public/assets/RokuCard.jpg);
+    background-image: url(../assets/RokuCard.jpg);
 }
 
 .aang-card {
-    background-image: url(/public/assets/AangCard\ .jpg);
+    background-image: url(../assets/AangCard\ .jpg);
 }
 
 .korra-card {
-    background-image: url(/public/assets/korracard.jpg);
+    background-image: url(../assets/korracard.jpg);
 }
 
 .origin {
@@ -225,20 +225,20 @@
 }
 
 .toupeira-img {
-    background-image: url(/public/assets/cardToupeira.jpg);
+    background-image: url(../assets/cardToupeira.jpg);
 
 }
 
 .bisao-img {
-    background-image: url(/public/assets/AppaGiant.png);
+    background-image: url(../assets/AppaGiant.png);
 }
 
 .moon {
-    background-image: url(/public/assets/MoonSea.jpg);
+    background-image: url(../assets/MoonSea.jpg);
 }
 
 .dragon {
-    background-image: url(/public/assets/DragonFire.webp);
+    background-image: url(../assets/DragonFire.webp);
 }
 
 .title-txt {

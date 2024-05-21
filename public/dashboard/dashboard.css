@@ -15,7 +15,7 @@ a {
 body {
     height: 100vh;
     width: 100vw;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -34,7 +34,7 @@ body {
 .user {
     height: 40vh;
     width: 20vw;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -47,7 +47,7 @@ body {
     margin-top: 2rem;
     height: 25vh;
     width: 25vh;
-    background-image: url(/public/assets/perfilIcon.png);
+    background-image: url(/assets/perfilIcon.png);
     background-position: center;
     background-size: cover;
     border-radius: 360px;

@@ -6,6 +6,7 @@
     scroll-behavior: smooth;
     font-family: "Prata", serif;
 
+
 }
 
 
@@ -53,7 +54,7 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(/public/assets/logoAvatar.png);
+    background-image: url(../assets/logoAvatar.png);
     background-position: center;
     background-size: cover;
 
@@ -133,7 +134,7 @@ nav a:hover {
 .home-button {
     height: 10vh;
     width: 4vw;
-    background-image: url(/public/assets/lemo.png);
+    background-image: url(../assets/lemo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,7 +154,7 @@ nav a:hover {
 }
 
 .fire-button {
-    background-image: url(/public/assets/EmblemaFireNation.webp);
+    background-image: url(../assets/EmblemaFireNation.webp);
     border-color: rgb(137, 135, 135);
 }
 
@@ -162,7 +163,7 @@ nav a:hover {
 }
 
 .water-button {
-    background-image: url(/public/assets/emblemaWaterNation.png);
+    background-image: url(../assets/emblemaWaterNation.png);
     border-color: rgb(137, 135, 135);
 }
 
@@ -171,7 +172,7 @@ nav a:hover {
 }
 
 .air-button {
-    background-image: url(/public/assets/emblemaAr.jpg);
+    background-image: url(../assets/emblemaAr.jpg);
     border-color: rgb(137, 135, 135);
 }
 
@@ -180,7 +181,7 @@ nav a:hover {
 }
 
 .earth-button {
-    background-image: url(/public/assets/emblemaEarthNation.jpg);
+    background-image: url(../assets/emblemaEarthNation.jpg);
     border-color: rgb(137, 135, 135);
 }
 
@@ -263,7 +264,7 @@ nav a:hover {
     height: 100vh;
     width: 100vw;
     display: flex;
-    background-image: url(/public/assets/avatarWallpaper.jpg);
+    background-image: url(../assets/avatarWallpaper.jpg);
     background-position: center;
     background-size: cover;
     color: rgb(255, 255, 255);
@@ -325,7 +326,7 @@ nav a:hover {
 .lax {
     height: 45vh;
     width: 100vw;
-    background-image: url(/public/assets/fireLax.jpeg);
+    background-image: url(../assets/fireLax.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -334,15 +335,15 @@ nav a:hover {
 }
 
 .um {
-    background-image: url(/public/assets/avataresWallpaper.jpg);
+    background-image: url(../assets/avataresWallpaper.jpg);
 }
 
 .dois {
-    background-image: url(/public/assets/sunGrupoAvatar.jpeg);
+    background-image: url(../assets/sunGrupoAvatar.jpeg);
 }
 
 .quatro {
-    background-image: url(/public/assets/download\ \(3\).jpg);
+    background-image: url(../assets/download\ \(3\).jpg);
 }
 
 
@@ -353,13 +354,13 @@ nav a:hover {
 
 
 .fire {
-    background-image: url(/public/assets/zuko.jpg);
+    background-image: url(../assets/zuko.jpg);
     background-position: left;
     background-repeat: no-repeat;
 
     height: 100vh;
     width: 100vw;
-
+    overflow-y: hidden;
     display: flex;
 }
 
@@ -385,7 +386,7 @@ nav a:hover {
 .zuko-fire {
     height: 100vh;
     width: 50vw;
-    background-image: url(/public/assets/zukoSolo.jpg);
+    background-image: url(../assets/zukoSolo.jpg);
     background-size: cover;
     background-position: bottom;
     border: 0.3rem solid rgb(194, 3, 3);
@@ -445,7 +446,7 @@ nav a:hover {
 
 
 .air {
-    background-image: url(/public/assets/aangBackground.jpg);
+    background-image: url(../assets/aangBackground.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -458,7 +459,7 @@ nav a:hover {
 .aang-air {
     height: 100vh;
     width: 50vw;
-    background-image: url(/public/assets/aangSolo.jpg);
+    background-image: url(../assets/aangSolo.jpg);
     background-size: cover;
     background-position: bottom;
     border: 0.3rem solid rgb(255, 255, 255);
@@ -502,7 +503,7 @@ nav a:hover {
 
 
 .water {
-    background-image: url(/public/assets/kataraBackground.png);
+    background-image: url(../assets/kataraBackground.png);
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
@@ -526,16 +527,7 @@ nav a:hover {
     border-top: 0;
 }
 
-.txt-water h1 {
-    font-size: 3rem;
-    text-align: center;
-    color: aliceblue;
-}
 
-.txt-water p {
-    font-size: 1.7rem;
-    color: #fff;
-}
 
 
 
@@ -543,7 +535,7 @@ nav a:hover {
 .katara-water {
     height: 100vh;
     width: 50vw;
-    background-image: url(/public/assets/kataraSolo.png);
+    background-image: url(../assets/kataraSolo.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -578,7 +570,7 @@ nav a:hover {
 .earth {
     height: 100vh;
     width: 100vw;
-    background-image: url(/public/assets/tophBackground.png);
+    background-image: url(../assets/tophBackground.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -590,7 +582,7 @@ nav a:hover {
 .toph-earth {
     height: 100vh;
     width: 50vw;
-    background-image: url(/public/assets/tophSolo.png);
+    background-image: url(../assets/tophSolo.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
