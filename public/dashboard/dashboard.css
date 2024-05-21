@@ -289,7 +289,7 @@ body {
     width: 80vw;
     height: 100vh;
     display: flex;
-    background: url(/public/assets/dropAir.jpg);
+    background: url(../assets/dropAir.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -305,7 +305,7 @@ body {
 .btn-card {
     height: 30vh;
     width: 30vw;
-    background-image: url(/public/assets/grupoAvatarNew.webp);
+    background-image: url(../assets/grupoAvatarNew.webp);
     background-position: center;
     background-size: cover;
     font-family: "Honk", system-ui;
@@ -351,7 +351,7 @@ body {
     width: 40vw;
     height: 100vh;
 
-    background-image: url(/public/assets/aangDesperto.jpg);
+    background-image: url(../assets/aangDesperto.jpg);
     background-position: left;
     background-size: cover;
 
@@ -404,7 +404,7 @@ body {
 .content-picture {
     width: 80vw;
     height: 100vh;
-    background: url(/public/assets/dropAir.jpg);
+    background: url(../assets/dropAir.jpg);
     background-position: center;
     background-size: cover;
     display: none;
@@ -439,23 +439,23 @@ body {
 }
 
 .aang-picture {
-    background-image: url(/public/assets/aangIcon.jpg);
+    background-image: url(../assets/aangIcon.jpg);
 }
 
 .katara-picture {
-    background-image: url(/public/assets/kataraIcon.jpg);
+    background-image: url(../assets/kataraIcon.jpg);
 }
 
 .sokka-picture {
-    background-image: url(/public/assets/sokkaIcon.jpg);
+    background-image: url(../assets/sokkaIcon.jpg);
 }
 
 .toph-picture {
-    background-image: url(/public/assets/TophIcon.jpg)
+    background-image: url(../assets/TophIcon.jpg)
 }
 
 .zuko-picture {
-    background-image: url(/public/assets/zukoIcon.jpg)
+    background-image: url(../assets/zukoIcon.jpg)
 }
 
 input[type="radio"] {
@@ -510,7 +510,7 @@ input[type="radio"]:checked {
 }
 
 .exit-personal {
-    background-image: url(/public/assets/cancelICon.svg);
+    background-image: url(../assets/cancelICon.svg);
     height: 10vh;
     width: 10vh;
     background-repeat: no-repeat;
@@ -530,7 +530,7 @@ input[type="radio"]:checked {
 }
 
 .exit-personal_2 {
-    background-image: url(/public/assets/cancelICon.svg);
+    background-image: url(../assets/cancelICon.svg);
     height: 10vh;
     width: 10vh;
     background-repeat: no-repeat;
