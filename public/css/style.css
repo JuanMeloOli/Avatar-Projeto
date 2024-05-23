@@ -640,12 +640,16 @@ nav a:hover {
 }
 
 .login-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     height: 30vh;
     width: 25vw;
     background-color: #000;
     border: 4px solid white;
     border-radius: 3rem;
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     align-items: center;

@@ -84,7 +84,7 @@
                     A Lenda de Aang", este é o desafio perfeito para testar seus conhecimentos e habilidades!
                 </p>
                 <p>Coloque agora aprova seus conhecimento</p>
-                <a class="button-water go" href="water-quiz.html">Entrar</a>
+                <button class="button-water go" onclick="goQuiz()">Entrar</button>
             </div>
             <div class="katara-water"></div>
         </section>
@@ -98,8 +98,8 @@
                     constantemente de maneira superprotetora por causa de sua "inabilidade", particularmente por seus
                     pais ultra protetores, Lao e Poppy Beifong.
                 </p>
-                <p>Ajude Toph a identificar de onde vem os ataques inimigos</p>
-                <a class="button-earth go" href="earth-toph.html">Entrar</a>
+                <p>Ajude Toph a identificar de onde vem os ataques inimigos e prove que ela pode se proteger sozinha</p>
+                <button class="button-earth go" onclick="goTophGame()">Entrar</button>
             </div>
         </section>
         <section id="fire" class="fire">
@@ -114,7 +114,7 @@
                     Real da Nação do Fogo ainda abriga uma câmara especial para o Agni Kai.
                 </p>
                 <p class="txt-scd">Participe de um Agni Kai Agora</p>
-                <a class="button-agnikai go" href="fire-AgniKai.html">Entrar</a>
+                <button class="button-agnikai go" onclick="goAgniKai()">Entrar</button>
             </div>
             <div class="zuko-fire"></div>
         </section>
@@ -129,6 +129,16 @@
             </div>
         </section>
     </main>
+    <div id="cardLogin" class="login-card">
+        <div class="txt-card-login">
+            <p>🚨Faça o Login</p>
+            <span>Para acessar áreas de dobras elementais você precisa estar logado.</span>
+        </div>
+        <div class="button-card-login">
+            <span onclick="close()" class="button-exit alert">Sair</span>
+            <span class="button-register alert">Fazer-Login</span>
+        </div>
+    </div>
 </body>
 
 </html>
