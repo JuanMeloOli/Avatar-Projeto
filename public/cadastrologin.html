@@ -80,7 +80,7 @@
 
 </html>
 <script>
-  function entrarLogin() {
+function entrarLogin() {
 
 var emailVar = input_email_log.value;
 var senhaVar = input_password_log.value;
@@ -217,11 +217,6 @@ function cadastrar() {
   var emailVar = input_email.value;
   var senhaVar = input_password.value;
   var confirmacaoSenhaVar = input_confirm.value;
-  console.log(nomeVar)
-  console.log(emailVar)
-  console.log(senhaVar)
-  console.log(confirmacaoSenhaVar)
-  console.log(dobraVar)
 
   const radios = document.querySelectorAll('input[name="dobra"]');
     let dobraVar = undefined;
@@ -230,6 +225,13 @@ function cadastrar() {
       if (radio.checked) {
         dobraVar = radio.value;
         }});
+        
+  console.log(nomeVar)
+  console.log(emailVar)
+  console.log(senhaVar)
+  console.log(confirmacaoSenhaVar)
+  console.log(dobraVar)
+
 
   if (
     nomeVar == "" ||

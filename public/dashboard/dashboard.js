@@ -1,4 +1,16 @@
+name_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+email_usuario.innerHTML = sessionStorage.EMAIL_USUARIO;
+
+
+
+
+function limparSessao() {
+  sessionStorage.clear();
+  window.location = "../cadastrologin.html";
+}
+
 const dash = document.getElementById("dash");
+
 
 new Chart(dash, {
   type: "line",
