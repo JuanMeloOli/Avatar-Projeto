@@ -424,7 +424,7 @@ nav a:hover {
     color: #fff;
     background-image: linear-gradient(rgb(215, 0, 0), rgb(80, 0, 0));
     border: 2px solid rgb(0, 0, 0);
-    border-bottom: 0.3rem solid rgb(212, 0, 0);
+    border-bottom: 0.3rem solid rgb(0, 0, 0);
     box-shadow: 0 0.7rem 1rem 0.2rem var(--red);
     text-decoration: none;
 }
@@ -640,7 +640,7 @@ nav a:hover {
 }
 
 .login-card {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

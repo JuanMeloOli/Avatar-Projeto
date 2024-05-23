@@ -15,18 +15,54 @@ setTimeout(function () {
 
 const cardLogin = document.getElementById("cardLogin");
 
-function close(params) {
+function closeLogin(params) {
   cardLogin.style.display = "none";
 }
 
+function goLogin(params) {
+  window.location = "./cadastrologin.html";
+}
+
+function goAir(params) {
+  if (
+    sessionStorage.NOME_USUARIO == undefined ||
+    sessionStorage.NOME_USUARIO == null
+  ) {
+    cardLogin.style.display = "flex";
+  } else {
+    window.location = "./air-aang.html";
+  }
+}
+
 function goQuiz(params) {
-  if (sessionStorage.NOME_USUARIO == undefined) {
+  if (
+    sessionStorage.NOME_USUARIO == undefined ||
+    sessionStorage.NOME_USUARIO == null
+  ) {
     cardLogin.style.display = "flex";
   } else {
     window.location = "./water-quiz.html";
   }
 }
 
-function goAgniKai(params) {}
+function goAgniKai(params) {
+  if (
+    sessionStorage.NOME_USUARIO == undefined ||
+    sessionStorage.NOME_USUARIO == null
+  ) {
+    cardLogin.style.display = "flex";
+  } else {
+    window.location = "./fire-AgniKai.html";
+  }
+}
 
-function goTophGame(params) {}
+function goTophGame(params) {
+  if (
+    sessionStorage.NOME_USUARIO == undefined ||
+    sessionStorage.NOME_USUARIO == null
+  ) {
+    cardLogin.style.display = "flex";
+  } else {
+    window.location = "./earth-toph.html";
+  }
+}
