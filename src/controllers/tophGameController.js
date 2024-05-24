@@ -1,9 +1,9 @@
-var agniKaiModel = require("../models/agniKaiModel");
+var tophGameModel = require("../models/tophGameModel");
 
 function pontuar(req, res) {
     var ponto = req.body.pontoServer;
     var id = req.body.idServer
-    agniKaiModel.pontuar(ponto, id)
+    tophGameModel.pontuar(ponto, id)
       .then(function (resultado) {
         res.json(resultado);
       })

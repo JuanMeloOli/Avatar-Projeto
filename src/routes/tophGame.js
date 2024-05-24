@@ -1,11 +1,11 @@
 var express = require("express");
 var router = express.Router();
 
-var agniKaiController = require("../controllers/agniKaiController");
+var tophGameController = require("../controllers/tophGameController");
 
 router.post("/pontuar", function (req, res) {
     // função a ser chamada quando acessar /carros/cadastrar
-    agniKaiController.pontuar(req, res);
+    tophGameController.pontuar(req, res);
 });
 
 

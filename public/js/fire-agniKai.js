@@ -141,8 +141,11 @@ function contar() {
     reiniciar();
   }
 }
+var id = sessionStorage.ID_USUARIO;
+
 
 function gamestart(params) {
+  console.log(id)
   timer.style.display = "block";
   setTimeout(contar, 3500);
   setTimeout(iniciar, 300);
@@ -163,12 +166,14 @@ function gamestart(params) {
       contCPU = -1000;
 
       fetch("./agniKai/pontuar", {
-        method: "PUT",
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          pontoServer: +1
+          pontoServer: +1,
+          idServer: id
+
       })
     }).then(function (resposta) {
         console.log("ESTOU NO THEN DO pontuar()!")
@@ -181,7 +186,7 @@ function gamestart(params) {
             resposta.json().then(json => {
                 console.log(json);
                 console.log(JSON.stringify(json));
-                sessionStorage.ID_USUARIO = json.id;
+                
               
                 setTimeout(function () {
                    reiniciar();

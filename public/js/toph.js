@@ -65,6 +65,7 @@ function reproduzirMusica() {
   }, 3000);
 }
 
+var id = sessionStorage.ID_USUARIO;
 function escolherLado(ladoEscolhido, ladoSorteado) {
   msg.style.display = "flex";
   jogadasRestantes--;
@@ -87,12 +88,56 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
     btnLeft.style.display = "none";
     btnRight.style.display = "none";
     msg.innerHTML = `Pontuação final: ${pontuacao}<br>`;
-    setTimeout(function () {
-      window.location.href = "earth-toph.html";
-    }, 3000);
-  }
+   
+
+
+       fetch("./tophGame/pontuar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          pontoServer: +1,
+          idServer: id
+
+      })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO pontuar()!")
+    
+        if (resposta.ok) {
+            console.log(resposta);
+            
+           
+    
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                
+              
+                setTimeout(function () {
+                  window.location = "/earth-toph.html";
+                }, 1000); // apenas para exibir o loading
+            });
+    
+        } else {
+    
+            console.log("Houve um erro ao tentar realizar o pontuar (toph)!");
+    
+            
+        }
+    
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+    
+    return false;
+      
+
+    }
+  };
+  
   setTimeout(function () {
     // Reinicio
     reproduzirMusica();
   }, 3000);
-}
+
