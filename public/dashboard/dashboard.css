@@ -47,7 +47,7 @@ body {
     margin-top: 2rem;
     height: 25vh;
     width: 25vh;
-    background-image: url(/assets/perfilIcon.png);
+    background-image: url(../assets/perfilIcon.png);
     background-position: center;
     background-size: cover;
     border-radius: 360px;

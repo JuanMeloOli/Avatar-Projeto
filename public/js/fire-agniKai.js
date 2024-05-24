@@ -162,7 +162,46 @@ function gamestart(params) {
       resultPlayer.style.display = "flex";
       contCPU = -1000;
 
-      reiniciar();
+      fetch("./agniKai/pontuar", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          pontoServer: +1
+      })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO pontuar()!")
+    
+        if (resposta.ok) {
+            console.log(resposta);
+            
+           
+    
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                sessionStorage.ID_USUARIO = json.id;
+              
+                setTimeout(function () {
+                   reiniciar();
+                }, 1000); // apenas para exibir o loading
+            });
+    
+        } else {
+    
+            console.log("Houve um erro ao tentar realizar o pontuar!");
+    
+            
+        }
+    
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+    
+    return false;
+      
+
     }
   });
 }

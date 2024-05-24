@@ -4,9 +4,8 @@ email_usuario.innerHTML = sessionStorage.EMAIL_USUARIO;
 
 
 
-function limparSessao() {
-  sessionStorage.clear();
-  window.location = "../cadastrologin.html";
+function sair() {
+  window.location = "../indexLogado.html";
 }
 
 const dash = document.getElementById("dash");

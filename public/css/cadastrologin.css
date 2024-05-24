@@ -123,6 +123,7 @@
     background-color: blue;
     transition: 1s ease-in-out;
     background-image: url(../assets/kataraArt.jpg);
+    z-index: 2;
  
 }
 
@@ -143,6 +144,7 @@
     flex-direction: column;
     text-align: center;
     border: 5px rgb(255, 255, 255) solid;
+    z-index: 3;
     
 }
 
@@ -214,4 +216,28 @@ input[type="radio"]:checked {
 .signUp:hover{
     background-color:  var(--red);
     border-color: rgb(190, 5, 5, 0.1);
+}
+
+.logout{
+    position: absolute;
+    background-image: url(../assets/logout.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 5vh;
+    width: 5vh;
+    z-index: 1;
+}
+.logoutone{
+    top: 1rem;
+    left: 1rem;
+}
+
+.logoutTwo{
+    top: 1rem;
+    right: 1rem;
+}
+
+.logout:hover{
+    background-color: red;
+    transform: scale(0.9);
 }

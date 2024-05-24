@@ -106,6 +106,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.6);
     transition: background-color 1.5s ease, backdrop-filter 0.3s ease;
     z-index: 2;
+    font-size: 0.9rem;
 }
 
 .scrolled {
@@ -121,7 +122,7 @@ nav .standard {
     height: 8vh;
     width: 8vh;
     overflow-y: hidden;
-    color: rgb(0, 0, 0);
+    
     border-radius: 90px;
     background-size: cover;
     transition: 0.7s all;
@@ -144,13 +145,15 @@ nav a:hover {
     height: 5vh;
     width: 6.5vw;
     line-height: 5vh;
-    background-color: beige;
-    transition: 1s all;
+    background-color: black;
+    color: bisque;
+    
+    transition: 1.5s all;
 }
 
 .history-button:hover {
-    background-color: black;
-    color: bisque;
+    background-color: beige;
+    color: black;
 }
 
 .fire-button {
@@ -193,13 +196,14 @@ nav a:hover {
     height: 5vh;
     width: 6.5vw;
     line-height: 5vh;
-    background-color: beige;
-    transition: 1s all;
+    color: bisque;
+    background-color: rgb(0, 0, 0);
+    transition: 1.5s all;
 }
 
 .aboutMe-button:hover {
-    background-color: black;
-    color: bisque;
+    background-color: bisque;
+    color: black;
 }
 
 
@@ -241,6 +245,40 @@ nav a:hover {
             rgb(189, 1, 1) 10.8%,
             rgb(0, 0, 0) 94.3%);
     transition: all 0.475s;
+}
+
+.perfil{
+    display: flex;
+    height: 10vh;
+    width: 30vh;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.photo {
+    height: 8vh;
+    width: 8vh;
+    background-image: url(../assets/perfilIcon.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 360px;
+    border: 1px solid black;
+}
+
+.content-perfil{
+    height: 10vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    
 }
 
 
@@ -719,3 +757,7 @@ nav a:hover {
     filter: drop-shadow(0px 0px 10px #000);
     overflow: hidden;
 }
+
+
+    
+
