@@ -251,19 +251,20 @@ nav a:hover {
     display: flex;
     height: 10vh;
     width: 30vh;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     color: #fff;
+    font-size: 1.5rem;
 }
 
 .photo {
-    height: 8vh;
-    width: 8vh;
+    height: 8.5vh;
+    width: 8.5vh;
     background-image: url(../assets/perfilIcon.png);
     background-position: center;
     background-size: cover;
     border-radius: 360px;
-    border: 1px solid black;
+    border: 2px solid rgb(251, 251, 251);
 }
 
 .content-perfil{
@@ -272,12 +273,7 @@ nav a:hover {
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
-    text-shadow:
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        2px 2px 0 #000;
+    gap: 0.5remm
     
 }
 

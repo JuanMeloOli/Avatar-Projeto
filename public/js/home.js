@@ -1,5 +1,10 @@
 
 
+
+
+
+
+
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("nav");
   if (window.scrollY > 0) {

@@ -51,7 +51,7 @@ body {
     background-position: center;
     background-size: cover;
     border-radius: 360px;
-    border: 1px solid black;
+    border: 5px solid black;
 }
 
 .account {

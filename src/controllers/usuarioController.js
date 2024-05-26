@@ -24,7 +24,8 @@ function autenticar(req, res) {
             id: resultadoAutenticar[0].idUsuario,
             email: resultadoAutenticar[0].email,
             nome: resultadoAutenticar[0].nome,
-            senha: resultadoAutenticar[0].senha
+            senha: resultadoAutenticar[0].senha,
+            foto: resultadoAutenticar[0].fotoPerfil
           });
       
         } else if (resultadoAutenticar.length == 0) {
@@ -81,7 +82,56 @@ function cadastrar(req, res) {
   }
 }
 
+function selectPicture(req, res) {
+  var picture = req.body.pictureServer;
+  var id = req.body.idServer;
+
+  if (picture === undefined) {
+    console.log("Seu avatar está undefined!");
+    return res.status(400).send("Seu avatar está undefined!");
+  } else if (id === undefined) {
+    console.log("Seu ID está undefined!");
+    return res.status(400).send("Seu ID está undefined!");
+  }
+
+  usuarioModel.selectPicture(picture, id)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao realizar a troca de avatar! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function selectName(req, res) {
+  var nome = req.body.nomeServer;
+  var id = req.body.idServer;
+
+  if (nome === undefined) {
+    console.log("Seu nome está undefined!");
+    return res.status(400).send("Seu nome está undefined!");
+  } else if (id === undefined) {
+    console.log("Seu ID está undefined!");
+    return res.status(400).send("Seu ID está undefined!");
+  }
+
+  usuarioModel.selectName(nome, id)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao realizar a troca de nome! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 module.exports = {
   autenticar,
   cadastrar,
+  selectPicture,
+  selectName
 };

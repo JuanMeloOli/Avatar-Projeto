@@ -1,5 +1,28 @@
 name_perfil.innerHTML = sessionStorage.NOME_USUARIO;
-email_perfil.innerHTML = sessionStorage.EMAIL_USUARIO;
+
+
+function setProfileImage() {
+  
+  var photo_usuario = document.getElementById("photo_usuario");
+
+  if (sessionStorage.FOTO_USUARIO == "0") {
+    photo_usuario.style.backgroundImage = "url(../assets/perfilIcon.png)";
+  } else if (sessionStorage.FOTO_USUARIO == "1") {
+    photo_usuario.style.backgroundImage = "url(../assets/aangIcon.jpg)";
+  } else if (sessionStorage.FOTO_USUARIO == "2") {
+    photo_usuario.style.backgroundImage = "url(../assets/kataraIcon.jpg)";
+  } else if (sessionStorage.FOTO_USUARIO == "3") {
+    photo_usuario.style.backgroundImage = "url(../assets/sokkaIcon.jpg)";
+  } else if (sessionStorage.FOTO_USUARIO == "4") {
+    photo_usuario.style.backgroundImage = "url(../assets/TophIcon.jpg)";
+  } else if (sessionStorage.FOTO_USUARIO == "5") {
+    photo_usuario.style.backgroundImage = "url(../assets/zukoIcon.jpg)";
+  }
+}
+
+window.addEventListener('load', setProfileImage);
+
+
 
 window.addEventListener("scroll", function () {
     const navbar = document.getElementById("nav");

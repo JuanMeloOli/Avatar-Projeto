@@ -163,7 +163,7 @@
 .element {
     background-color: antiquewhite;
     width: 20vw;
-    height: 65vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     border-top-left-radius: 3rem;
@@ -202,7 +202,7 @@
 }
 
 .container-txt {
-    height: 35vh;
+    height: 40vh;
     width: 20vw;
     display: flex;
     flex-direction: column;
@@ -244,8 +244,28 @@
 .title-txt {
     font-size: 2rem;
     margin-bottom: 20px;
+    overflow-y: hidden;
 }
 
 .txt-card {
     font-size: 1.5rem;
+}
+
+.logout{
+    position: fixed;
+    background-image: url(../assets/logout.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 6vh;
+    width: 6vh;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    transition: 0.5s ease;
+}
+
+.logout:hover{
+    background-color: red;
+    transform: scale(0.9);
+    border-radius: 50%;
 }

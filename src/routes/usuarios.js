@@ -12,4 +12,12 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+router.put("/selectPicture", function (req, res) {
+    usuarioController.selectPicture(req, res);
+  });
+
+router.put("/selectName", function (req, res) {
+    usuarioController.selectName(req, res);
+  });
+
 module.exports = router;

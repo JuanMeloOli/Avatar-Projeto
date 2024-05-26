@@ -14,7 +14,7 @@
 <body>
     <section class="menu">
         <div class="user">
-            <div class="photo"></div>
+            <div id="photo_usuario" class="photo"></div>
             <div class="account">
                 <span id="name_usuario"></span>
                 <span id="email_usuario">Usuário@email.com</span>
@@ -83,7 +83,7 @@
                     </div>
                     <div class=" inputForm">
                         <input type="text" id="input_name">
-                        <button class="submit">Trocar Nome</button>
+                        <button  onclick="selectName()" class="submit">Trocar Nome</button>
                     </div>
                 </div>
             </section>
@@ -94,24 +94,24 @@
                 </div>
                 <h1 class="msg-picture">Escolha seu novo Avatar</h1>
                 <section class="pictures">
-                    <label>
-                        <input type="radio" name="avatar" class="aang-picture picture">
+                    <label id="input_picture" name="input_picture">
+                        <input type="radio" name="avatar" class="aang-picture picture" value="1">
                     </label>
                     <label>
-                        <input type="radio" name="avatar" class="katara-picture picture">
+                        <input type="radio" name="avatar" class="katara-picture picture" value="2">
 
                     </label>
                     <label>
-                        <input type="radio" name="avatar" class="sokka-picture picture">
+                        <input type="radio" name="avatar" class="sokka-picture picture" value="3">
                     </label>
                     <label>
-                        <input type="radio" name="avatar" class="toph-picture picture">
+                        <input type="radio" name="avatar" class="toph-picture picture" value="4">
                     </label>
                     <label>
-                        <input type="radio" name="avatar" class="zuko-picture picture">
+                        <input type="radio" name="avatar" class="zuko-picture picture" value="5">
                     </label>
                 </section>
-                <button id="bottonAvatar"><strong>Trocar Avatar</strong></button>
+                <button id="bottonAvatar" onclick="selectPicture()"><strong>Trocar Avatar</strong></button>
 
             </section>
         </section>

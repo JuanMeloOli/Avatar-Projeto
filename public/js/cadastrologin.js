@@ -1,7 +1,7 @@
 function home(params) {
   setTimeout(function () {
     window.location = "index.html";
-  }, 500);
+  }, 300);
 }
 
   
@@ -114,6 +114,7 @@ function home(params) {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.FOTO_USUARIO = json.foto;
               
                 setTimeout(function () {
                   window.location = "/indexLogado.html";
@@ -145,12 +146,14 @@ function home(params) {
     var confirmacaoSenhaVar = input_confirm.value;
   
     const radios = document.querySelectorAll('input[name="dobra"]');
-      let dobraVar = undefined;
-  
-      radios.forEach((radio) => {
-        if (radio.checked) {
-          dobraVar = radio.value;
-          }});
+    let dobraVar = undefined;
+
+    for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+        dobraVar = radios[i].value;
+        break;
+    }
+}
           
     console.log(nomeVar)
     console.log(emailVar)
