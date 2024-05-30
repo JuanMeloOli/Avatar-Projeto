@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/water-quiz.css">
     <script src="js/water-quiz.js" async></script>
+    <link rel="shortcut icon" href="assets/miniAang.webp">
     <title>Quiz Avatar</title>
 </head>
+
+<style>
+    .bg-water {
+        opacity: 1;
+        transition: opacity 1s ease; /* Adiciona uma transição suave de 1 segundo para a propriedade de opacidade */
+    }
+    /* Opcional: Se você quiser que o vídeo comece com uma transição, defina a opacidade inicialmente como 0 */
+    /* .bg-water {
+        opacity: 0;
+    } */
+</style>
+
 
 <body>
     <audio autoplay loop>
@@ -15,6 +28,9 @@
     </audio>
     <video autoplay loop class="bg-water" src="./assets/BackgroundWater.mp4"></video>
     <a href="indexLogado.html" class="exit-button">Sair</a>
+
+    <div class="gif"></div>
+
     <section class="container">
         <div class="questions-container hide">
             <span class="question">Pergunta aqui?</span>

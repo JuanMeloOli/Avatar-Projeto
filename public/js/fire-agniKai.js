@@ -7,6 +7,8 @@ let personagem01;
 let personagem02;
 let contCPU = 0;
 let tempo_inicio = 3;
+let clickCount = 0;
+let contador = 0;
 
 function ajustarOpacidade() {
   overlay01.style.display = "flex";
@@ -126,9 +128,9 @@ function iniciar() {
 function contar() {
   contCPU++;
   atack_cpu.innerHTML = `Ataques de Fogo: ${contCPU}`;
-  if (contCPU < 200) {
+  if (contCPU < 100) {
     setTimeout(contar, 140);
-  } else if (contCPU == 200) {
+  } else if (contCPU == 100) {
     atack_cpu.style.display = "none";
     cpuclick.style.display = "none";
     buttonplayer.style.display = "none";
@@ -138,23 +140,78 @@ function contar() {
     resultCPU.style.display = "flex";
     resultPlayer.style.display = "flex";
 
-    reiniciar();
+
+    let clicksPorSegundo = clickCount/(contador-3)
+      
+    fetch("./agniKai/pontuar", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        pontoServer: clicksPorSegundo,
+        idServer: id
+
+    })
+  }).then(function (resposta) {
+      console.log("ESTOU NO THEN DO pontuar()!")
+  
+      if (resposta.ok) {
+          console.log(resposta);
+          
+         
+  
+          resposta.json().then(json => {
+              console.log(json);
+              console.log(JSON.stringify(json));
+              
+            
+              setTimeout(function () {
+                 reiniciar();
+              }, 1000); // apenas para exibir o loading
+          });
+  
+      } else {
+  
+          console.log("Houve um erro ao tentar realizar o pontuar!");
+  
+          
+      }
+  
+  }).catch(function (erro) {
+      console.log(erro);
+  })
+  
+  return false;
+    
+
   }
+  }
+
+function incrementarContador(params) {
+  contador++
+  setTimeout(incrementarContador, 1000)
+  
 }
-var id = sessionStorage.ID_USUARIO;
+
+
+
+
+let id = sessionStorage.ID_USUARIO;
 
 
 function gamestart(params) {
-  console.log(id)
+  incrementarContador()
   timer.style.display = "block";
   setTimeout(contar, 3500);
   setTimeout(iniciar, 300);
   startGame.style.display = "none";
-  var clickCount = 0;
   buttonplayer.addEventListener("click", () => {
     clickCount++;
     atackplayer.innerHTML = `Ataques de Fogo: ${clickCount}`;
-    if (clickCount == 200) {
+    
+
+    if (clickCount == 100) {
       atack_cpu.style.display = "none";
       cpuclick.style.display = "none";
       buttonplayer.style.display = "none";
@@ -165,13 +222,16 @@ function gamestart(params) {
       resultPlayer.style.display = "flex";
       contCPU = -1000;
 
+
+      let clicksPorSegundo = clickCount/(contador-3)
+      
       fetch("./agniKai/pontuar", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          pontoServer: +1,
+          pontoServer: clicksPorSegundo,
           idServer: id
 
       })
@@ -208,5 +268,6 @@ function gamestart(params) {
       
 
     }
-  });
+  }
+);
 }

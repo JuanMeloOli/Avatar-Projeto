@@ -71,13 +71,17 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
   jogadasRestantes--;
   if (ladoEscolhido == ladoSorteado) {
     pontuacao++;
+    if (jogadasRestantes==1) {
+      msg.innerHTML = `Você Acertou!<br> Falta ${jogadasRestantes} jogada`;  
+    }else{
     msg.innerHTML = `Você Acertou!<br> Faltam ${jogadasRestantes} jogadas`;
+    }
   } else {
-    msg.innerHTML = `Você Errou!<br> Pontuação final: 0${pontuacao} <br>
-    Tente Novamente!`;
-    setTimeout(function () {
-      window.location.href = "earth-toph.html";
-    }, 3000);
+    if (jogadasRestantes==1) {
+      msg.innerHTML = `Você Errou!<br> Falta ${jogadasRestantes} jogada`;  
+    }else{
+    msg.innerHTML = `Você Errou!<br> Faltam ${jogadasRestantes} jogadas`;
+    }
   }
   scoreboard.innerHTML = `Pontuação: ${pontuacao}`;
   btnLeft.style.display = "none";
@@ -97,7 +101,7 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          pontoServer: +1,
+          pontoServer: pontuacao,
           idServer: id
 
       })
@@ -134,10 +138,10 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
       
 
     }
+    setTimeout(function () {
+      // Reinicio
+      reproduzirMusica();
+    }, 3000);
   };
   
-  setTimeout(function () {
-    // Reinicio
-    reproduzirMusica();
-  }, 3000);
 

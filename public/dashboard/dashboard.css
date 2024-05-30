@@ -27,14 +27,15 @@ body {
     position: fixed;
     width: 20vw;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 222, 184);
     border-right: #000 5px solid;
+    
 }
 
 .user {
     height: 40vh;
     width: 20vw;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 222, 184);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -147,8 +148,8 @@ body {
 .high-txt {
     text-align: center;
     height: 10vh;
-    line-height: 10vh;
-    font-size: 2rem;
+    line-height: 5vh;
+    font-size: 1.7rem;
     border-bottom: 2px solid black;
     color: #fff;
     text-shadow:

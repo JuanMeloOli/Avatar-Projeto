@@ -6,6 +6,7 @@
 comandos para mysql server
 */
 
+create database avatar;
 use avatar;
 
 CREATE TABLE usuario (
@@ -14,17 +15,20 @@ CREATE TABLE usuario (
     email VARCHAR(45),
     senha VARCHAR(40),
     favDobra VARCHAR(10),
-    CONSTRAINT chk_favDobra CHECK (favDobra IN ('fogo', 'agua', 'terra', 'ar'))
+    CONSTRAINT chk_favDobra CHECK (favDobra IN ('fogo', 'agua', 'terra', 'ar')),
+    fotoPerfil char(1)
 );
+
+select * from usuario;
+select * from usuario;
 
 
 create table games (
 idGames int primary key auto_increment,
-vitoriasTophgame int,
-vitoriasAgniKai int,
+Tophgame int,
+AgniKai float,
 fkUsuario int,
 constraint fkUsuarioGames foreign key (fkUsuario) references usuario(idUsuario));
-
 
 
 
@@ -34,13 +38,7 @@ acertos int
 );
 
 
-insert into games values 
-(1, 1, 1, 4);
-
-
-UPDATE games
-SET vitoriastophGame = vitoriastophGame  + 1
-WHERE idGames = 1;
+select sum(vitoriasAgniKai) from games where fkUsuario = 9;
 
 select * from games;
 

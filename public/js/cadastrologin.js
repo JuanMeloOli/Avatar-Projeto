@@ -1,4 +1,5 @@
 function home(params) {
+  console.log(email)
   setTimeout(function () {
     window.location = "index.html";
   }, 300);
@@ -105,9 +106,8 @@ function home(params) {
     
         if (resposta.ok) {
             console.log(resposta);
-            
-           
-    
+     
+        
             resposta.json().then(json => {
                 console.log(json);
                 console.log(JSON.stringify(json));
@@ -115,6 +115,8 @@ function home(params) {
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
                 sessionStorage.FOTO_USUARIO = json.foto;
+
+                
               
                 setTimeout(function () {
                   window.location = "/indexLogado.html";
@@ -134,7 +136,8 @@ function home(params) {
     
     return false;
     }
-  
+    var email = json.email
+    console.log(email)
   function cadastrar() {
     validarEmail()
     validarSenha()

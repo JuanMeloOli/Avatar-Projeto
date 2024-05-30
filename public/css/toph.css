@@ -64,7 +64,7 @@ html {
 
 .game {
     height: 100%;
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 128, 0), rgb(0, 0, 0));
+    background: linear-gradient(to right,#2c5f2d, #4d7f4e, #78c355, #8dd26c, #a3e083, #b9e79b);
     animation: changeColor 10s linear infinite alternate;
     display: flex;
 }
@@ -102,7 +102,7 @@ html {
     align-items: top 1rem;
     transition: 0.5s ease;
     font-size: 5rem;
-    color: #fff;
+    color: #13d502;
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
