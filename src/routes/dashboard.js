@@ -11,5 +11,9 @@ router.post("/kpiEarth", function (req, res) {
     dashboardController.kpiEarth(req, res);
 })
 
+router.post("/enviarMsg", function (req, res) {
+    dashboardController.enviarMsg(req, res);
+})
+
 
 module.exports = router;

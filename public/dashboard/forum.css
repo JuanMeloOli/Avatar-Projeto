@@ -31,11 +31,11 @@
 
 
 
-.box-msg {
+.box_msg {
     margin-top: 3rem;
     height: 20vh;
     width: 40vw;
-    background-color: brown;
+    background-color: rgb(150, 150, 150);
     border: 0.3rem solid black;
     border-radius: 4rem;
     display: flex;
@@ -99,7 +99,7 @@
 .txt-usuario {
     text-align: left;
     vertical-align: top;
-    background-color: brown;
+    background-color: transparent;
     border: none;
     height: 13vh;
     width: 28vw;
@@ -120,13 +120,21 @@
     width: 15%;
     align-items: center;
     justify-content: end;
-    gap: 2rem;
+}
+
+.content-day{
+    display: flex;
+    height: 3vh;
+    width: 55%;
+    align-items: center;
+    padding-left: 2rem;
+    justify-content: start;
 }
 
 .content-btn-msg {
     display: flex;
     height: 3vh;
-    width: 85%;
+    width: 30%;
     align-items: center;
     justify-content: end;
     gap: 2rem;

@@ -115,6 +115,7 @@ function home(params) {
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
                 sessionStorage.FOTO_USUARIO = json.foto;
+                sessionStorage.DOBRA_USUARIO = json.dobra;
 
                 
               
