@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 
@@ -13,20 +14,144 @@
         'opsz' 24
 }
 
+body{
+    overflow-x: hidden ;
+    display: flex;
+}
+
+.menu {
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(255, 222, 184);
+    border-right: #000 5px solid;
+    
+}
+
+.user {
+    height: 40vh;
+    width: 20vw;
+    background-color: rgb(255, 222, 184);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-right: #000 5px solid;
+
+}
+
+.photo {
+    margin-top: 2rem;
+    height: 25vh;
+    width: 25vh;
+    background-image: url(../assets/perfilIcon.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 360px;
+    border: 5px solid black;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vh;
+    height: 10vh;
+    padding: 2vh;
+    gap: 0.5rem;
+}
+
+a{
+    color: #000;
+}
+
+.btn-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
+    width: 20vw;
+    color: #000;
+}
+
+
+
+.button-data {
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vw;
+    font-size: 1.5rem;
+
+}
+
+.button-style {
+    height: 10vh;
+    width: 20vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vw;
+    font-size: 1.5rem;
+
+}
+
+.button-exit {
+    height: 10vh;
+    width: 20vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vw;
+    font-size: 1.5rem;
+
+}
+
+.userBtn:hover {
+    color: #a10000;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
 
 .content-forum {
     margin-left: 20vw;
     width: 80vw;
-    height: 100vh;
+    height:400vh;
     background-color: blueviolet;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.container-msg {
-    height: 100vh;
+.container-msg-usuario {
+    height: 30vh;
     width: 40vw;
     background-color: rgb(129, 129, 129);
+    border-bottom: black solid 3px;
+}
+
+#container_msg_others{
+    height: 370vh;
+    width: 40vw;
+    background-color: rgb(129, 129, 129);
+    border-bottom: black solid 3px;
 }
 
 
@@ -45,7 +170,7 @@
 
 .content-high-msg {
     display: flex;
-    height: 17vh;
+    height: 16vh;
     width: 35vw;
     align-items: center;
     justify-content: space-between;
@@ -57,11 +182,12 @@
 
 .content-low-msg {
     display: flex;
-    height: 3vh;
+    height: 4vh;
     width: 100%;
     align-items: center;
     justify-content: end;
     color: rgb(255, 255, 255);
+    padding-bottom: 1rem;
 }
 
 
@@ -78,6 +204,19 @@
 #photo_msg {
     height: 10vh;
     width: 10vh;
+
+    background-image: url(../assets/perfilIcon.png);
+    border: 1px solid rgb(255, 255, 255);
+    background-position: center;
+    background-size: cover;
+    border-radius: 360px;
+
+}
+
+.foto_msg {
+    height: 10vh;
+    width: 10vh;
+
     background-image: url(../assets/perfilIcon.png);
     border: 1px solid rgb(255, 255, 255);
     background-position: center;
@@ -92,8 +231,15 @@
     height: 16vh;
     width: 28vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    white-space: normal; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 3vh;
+    font-family: monospace;
+    font-size: 1rem;
 }
 
 .txt-usuario {
@@ -116,7 +262,7 @@
 
 .content-hora {
     display: flex;
-    height: 3vh;
+
     width: 15%;
     align-items: center;
     justify-content: end;

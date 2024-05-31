@@ -22,6 +22,20 @@ function enviarMsg(req, res) {
       });
   }
 
+function obterTodasMsgs(res) {
+    forumDashModel.obterTodasMsgs()
+      .then(function (mensagens) {
+        res.json(mensagens);
+      })
+      .catch(function (erro) {
+        console.error(erro);
+        console.error("Houve um erro ao obter todas as mensagens do fórum! Erro: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+      });
+}
+
+
 module.exports = {
-    enviarMsg
+    enviarMsg,
+    obterTodasMsgs
   };
