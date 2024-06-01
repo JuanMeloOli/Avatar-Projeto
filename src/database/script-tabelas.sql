@@ -5,9 +5,11 @@
 /*
 comandos para mysql server
 */
-
 create database avatar;
 use avatar;
+
+
+
 
 CREATE TABLE usuario (
     idUsuario INT PRIMARY KEY AUTO_INCREMENT,
@@ -37,10 +39,23 @@ idQuiz int primary key auto_increment,
 acertos int 
 );
 
+create table forum(
+idForum int primary key auto_increment,
+mensagem varchar (250),
+data_insercao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+fkUsuario int,
+constraint fkUsuarioForum foreign key (fkUsuario) references usuario(idUsuario));
 
-select sum(vitoriasAgniKai) from games where fkUsuario = 9;
+
+
+select * from forum;
+
+
+describe usuario;
+    
+    
+
 
 select * from games;
-
-
+select * from usuario;
 describe usuario;

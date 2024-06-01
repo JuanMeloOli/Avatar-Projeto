@@ -16,17 +16,19 @@
         <div class="user">
             <div id="photo_usuario" class="photo"></div>
             <div class="account">
-                <span id="name_user"></span>
+                <span id="name_user">Usuario</span>
                 <span id="email_usuario">Usuário@email.com</span>
             </div>
         </div>
         <div class="btn-user">
-            <div onclick="redirecionarParaData()" class="button-data userBtn"><span
-                    class="material-icons">bar_chart</span><span>Dados</span></div>
-            <div onclick="redirecionarParaPersonalizar()" class="button-style userBtn"><span
-                    class="material-icons">format_paint</span><span>Personalizar</span></div>
-            <a href="forum.html" class="button-style userBtn"><span
-                    class="material-icons">format_paint</span><span>forum</span></a>
+            <a href="dashboard.html" class="button-data userBtn"><span
+                    class="material-icons">bar_chart</span><span>Dados</span></a>
+
+            <a href="forum.html" class="button-style userBtn"><span class="miniAang"></span><span
+                    class="material-icons pagSelected">forum</span><span class="pagSelected">Forum</span></a>
+
+            <a href="personalizar.html" class="button-style userBtn"><span
+                    class="material-icons">format_paint</span><span>Personalizar</span></a>
             <div onclick="sair()" class="button-exit userBtn"><span class="material-icons">logout</span> <span>Sair</span></div>
         </div>
     </section>
@@ -44,7 +46,6 @@
                     </div>
                 </div>
                 <div class="content-low-msg">
-                    <div></div>
                     <div id="currentTime" class="content-hora"></div>
                     <div id="currentDay" class="content-day"></div>
                     <div class="content-btn-msg">
@@ -62,7 +63,3 @@
 </html>
 <script src="forum.js"></script>
 
-<!-- 
-<div class="btn-msg material-symbols-outlined">edit </div>
-<div class="btn-msg material-symbols-outlined">delete </div>
--->

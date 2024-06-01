@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="personalizar.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="menu">
+        <div class="user">
+            <div id="photo_usuario" class="photo"></div>
+            <div class="account">
+                <span id="name_usuario">Usuario</span>
+                <span id="email_usuario">Usuário@email.com</span>
+            </div>
+        </div>
+        <div class="btn-user">
+            <a href="dashboard.html" class="button-data userBtn"><span
+                    class="material-icons">bar_chart</span><span>Dados</span></a>
+            <a href="forum.html" class="button-style userBtn"><span
+                    class="material-icons">forum</span><span>Forum</span></a>
+            <a href="#personal" class="button-style userBtn"><span class="miniAang"></span><span
+                    class="material-icons pagSelected">format_paint</span><span class="pagSelected">Personalizar</span></a>
+            <div onclick="sair()" class="button-exit userBtn"><span class="material-icons">logout</span> <span>Sair</span></div>
+        </div>
+    </section>
+    <section id="personal" class="personal-content">
+        <section class="personal">
+            <div class="btn-personal">
+                <div class="tradeName btn-card">Mudar Nome</div>
+                <div class="tradePicture  btn-card">Mudar Foto</div>
+            </div>
+        </section>
+        <section class="content-name">
+
+            <div class="over"></div>
+            <div class="trade-name">
+                <div class="exit-content_2">
+                    <button class="exit-personal_2 back"></button>
+                </div>
+                <div class=" inputForm">
+                    <input type="text" id="input_name">
+                    <button  onclick="selectName()" class="submit">Trocar Nome</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-picture">
+            <div class="exit-content">
+                <button class="exit-personal back"></button>
+            </div>
+            <h1 class="msg-picture">Escolha seu novo Avatar</h1>
+            <section class="pictures">
+                <label id="input_picture" name="input_picture">
+                    <input type="radio" name="avatar" class="aang-picture picture" value="1">
+                </label>
+                <label>
+                    <input type="radio" name="avatar" class="katara-picture picture" value="2">
+
+                </label>
+                <label>
+                    <input type="radio" name="avatar" class="sokka-picture picture" value="3">
+                </label>
+                <label>
+                    <input type="radio" name="avatar" class="toph-picture picture" value="4">
+                </label>
+                <label>
+                    <input type="radio" name="avatar" class="zuko-picture picture" value="5">
+                </label>
+            </section>
+            <button id="bottonAvatar" onclick="selectPicture()"><strong>Trocar Avatar</strong></button>
+
+        </section>
+    </section>
+</body>
+</html>
+<script src="personalizar.js"></script>
