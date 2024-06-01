@@ -129,10 +129,34 @@ function selectName(req, res) {
     });
 }
 
+function selectDobra(req, res) {
+  var dobra = req.body.dobraServer;
+  var id = req.body.idServer;
+
+  if (dobra === undefined) {
+    console.log("Sua nova Dobra está undefined!");
+    return res.status(400).send("Sua nova Dobra está undefined!");
+  } else if (id === undefined) {
+    console.log("Seu ID está undefined!");
+    return res.status(400).send("Seu ID está undefined!");
+  }
+
+  usuarioModel.selectDobra(dobra, id)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao realizar a troca de nome! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
 
 module.exports = {
   autenticar,
   cadastrar,
   selectPicture,
-  selectName
+  selectName,
+  selectDobra
 };

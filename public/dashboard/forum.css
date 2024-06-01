@@ -194,18 +194,20 @@ a{
     height: 30vh;
     width: 80vw;
     background-color: rgb(255, 255, 255);
-    border-bottom: black solid 3px;
 }
 
 #container_msg_others{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     min-height: 70vh;
     height: fit-content;
     width: 45vw;
-    background-image: url(../assets/wallElements.jpg);
+    background-image: url(../assets/wallElementsTeste.jpg);
     background-size: 100% auto;
+    border-left: 5px solid rgb(255, 140, 0);
+    border-right: 5px solid rgb(255, 140, 0);
 }
 
 
@@ -223,8 +225,10 @@ a{
 }
 
 .usersMsg{
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
+
+
 
 .content-high-msg {
     display: flex;

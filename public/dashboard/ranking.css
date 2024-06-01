@@ -1,0 +1,55 @@
+*{
+    overflow: hidden;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin-left: 20vw;
+  }
+  
+  .section {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .content {
+
+    text-align: center;
+  }
+  
+  .btn-left,
+  .btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .btn-left {
+    left: 10px;
+  }
+  
+  .btn-right {
+    right: 10px;
+  }
+
+
+/* Estilos para diferenciar visualmente cada seção */
+#section1 { background-color: #3498db; }
+#section2 { background-color: #e74c3c; }
+#section3 { background-color: #2ecc71; }
+#section4 { background-color: #a0ba10; }
+
+
+

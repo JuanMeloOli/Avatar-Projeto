@@ -31,6 +31,10 @@ function mostrarHorarioAtual(params) {
 
 setInterval(mostrarHorarioAtual, 1000);
 
+function sair() {
+  window.location = "../indexLogado.html";
+}
+
 name_user.innerHTML = sessionStorage.NOME_USUARIO;
 name_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 email_usuario.innerHTML = sessionStorage.EMAIL_USUARIO;

@@ -12,7 +12,7 @@ new Chart(dobra, {
         borderWidth: 1,
         backgroundColor: [
           "red", // Fogo
-          "white", // Ar
+          "grey", // Ar
           "blue", // Água
           "green", // Terra
         ],

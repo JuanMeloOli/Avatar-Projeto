@@ -128,8 +128,8 @@ function selectPicture() {
 function selectName(params) {
   let nomeVar = input_name.value;
 
-  if (nomeVar === undefined) {
-    alert("Escreve seu nome novo!");
+  if (nomeVar === "") {
+    alert("Escreve seu novo Nome!");
     return;
   }
   sessionStorage.setItem("NOME_USUARIO", nomeVar);
@@ -148,10 +148,52 @@ function selectName(params) {
 
       if (resposta.ok) {
         setTimeout(() => {
-          window.location = "dashboard.html";
+          window.location = "personalizar.html";
         }, 1000);
       } else {
         throw new Error("Houve um erro ao tentar realizar a troca de nome!");
+      }
+    })
+    .catch(function (erro) {
+      console.error("#ERRO: ", erro);
+    });
+}
+
+function selectDobra(params) {
+  const radios = document.querySelectorAll('.radioDobra');
+    let dobraVar = undefined;
+
+    for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+        dobraVar = radios[i].value;
+        break;
+    }
+}
+
+  if (dobraVar === undefined) {
+    alert("Selecione uma Dobra!");
+    return;
+  }
+  sessionStorage.setItem("DOBRA_USUARIO", dobraVar);
+  fetch("../usuarios/selectDobra", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      dobraServer: dobraVar,
+      idServer: id,
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        setTimeout(() => {
+          window.location = "personalizar.html";
+        }, 1000);
+      } else {
+        throw new Error("Houve um erro ao tentar realizar a troca de Dobra!");
       }
     })
     .catch(function (erro) {

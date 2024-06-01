@@ -195,8 +195,20 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-input[type="radio"]:checked {
-    background-color: var(--red);
+.radioFire:checked {
+    background-color: red !important;
+}
+
+.radioWater:checked {
+    background-color: blue !important;
+}
+
+.radioEarth:checked {
+    background-color: green !important;
+}
+
+.radioAir:checked {
+    background-color: grey !important;
 }
 
 .blue {

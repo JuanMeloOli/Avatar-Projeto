@@ -280,14 +280,16 @@ body {
 }
 
 .question {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 
 .dobraForm {
     display: flex;
+    font-size: 1.4rem;
     gap: 0.2rem;
-    justify-content: center;
+   
+    align-items: center;
 }
 
 

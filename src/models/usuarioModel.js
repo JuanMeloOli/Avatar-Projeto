@@ -64,9 +64,26 @@ function selectName(nome, id) {
   return database.executar(instrucaoSql);
 }
 
+function selectDobra(dobra, id) {
+  console.log(
+    "ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():",
+    dobra,
+    id
+  );
+
+  var instrucaoSql = `
+      UPDATE usuario
+      SET favDobra = '${dobra}'
+      WHERE idUsuario = '${id}';
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
   autenticar,
   cadastrar,
   selectPicture,
-  selectName
+  selectName,
+  selectDobra
 };

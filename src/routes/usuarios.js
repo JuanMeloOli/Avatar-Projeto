@@ -20,4 +20,8 @@ router.put("/selectName", function (req, res) {
     usuarioController.selectName(req, res);
   });
 
+router.put("/selectDobra", function (req, res) {
+    usuarioController.selectDobra(req, res);
+  });
+
 module.exports = router;
