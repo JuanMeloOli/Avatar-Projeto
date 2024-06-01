@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="personalizar.css">
     <title>Document</title>
 </head>
+
 <body>
     <section class="menu">
         <div class="user">
@@ -22,8 +24,11 @@
             <a href="forum.html" class="button-style userBtn"><span
                     class="material-icons">forum</span><span>Forum</span></a>
             <a href="#personal" class="button-style userBtn"><span class="miniAang"></span><span
-                    class="material-icons pagSelected">format_paint</span><span class="pagSelected">Personalizar</span></a>
-            <div onclick="sair()" class="button-exit userBtn"><span class="material-icons">logout</span> <span>Sair</span></div>
+                    class="material-icons pagSelected">format_paint</span><span
+                    class="pagSelected">Personalizar</span></a>
+            <div onclick="sair()" class="button-exit userBtn"><span class="material-icons">logout</span>
+                <span>Sair</span>
+            </div>
         </div>
     </section>
     <section id="personal" class="personal-content">
@@ -40,9 +45,31 @@
                 <div class="exit-content_2">
                     <button class="exit-personal_2 back"></button>
                 </div>
-                <div class=" inputForm">
-                    <input type="text" id="input_name">
-                    <button  onclick="selectName()" class="submit">Trocar Nome</button>
+                <div class="nameBox">
+                    <span class="question">Novo Nome:</span>
+                    <div class="inputForm">
+                        <input class="inputName" type="text" id="input_name">
+                    </div>
+                    <button onclick="selectName()" class="btn_dobra">
+                        <span class="btn_span">Atualizar</span>
+                    </button>
+                </div>
+
+                <div class="dobraBox">
+                    <span class="question">Nova Dobra Favorita:</span>
+                    <label id="dobraForm" class="dobraForm">
+                        <input class="radioDobra radioFire" type="radio" id="fogo" name="dobra" value="fogo">
+                        <label for="fogo">Fogo</label><br>
+                        <input class="radioDobra radioWater" type="radio" id="agua" name="dobra" value="agua">
+                        <label for="agua">Água</label><br>
+                        <input class="radioDobra radioEarth" type="radio" id="terra" name="dobra" value="terra">
+                        <label for="terra">Terra</label><br>
+                        <input class="radioDobra radioAir" type="radio" id="ar" name="dobra" value="ar">
+                        <label for="ar">Ar</label><br><br>
+                    </label>
+                    <button class="btn_dobra">
+                        <span class="btn_span">Atualizar</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -75,5 +102,6 @@
         </section>
     </section>
 </body>
+
 </html>
 <script src="personalizar.js"></script>

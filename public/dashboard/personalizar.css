@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ body {
     height: 100vh;
     background-color: rgb(255, 140, 0);
     border-right: #000 5px solid;
-    
+
 }
 
 .user {
@@ -69,7 +69,7 @@ body {
     gap: 0.5rem;
 }
 
-.pagSelected{
+.pagSelected {
     color: #fff;
     text-shadow:
         -1px -1px 0 #000,
@@ -79,7 +79,7 @@ body {
 }
 
 
-.miniAang{
+.miniAang {
     position: absolute;
     margin-left: 2rem;
     left: 0;
@@ -87,7 +87,7 @@ body {
     width: 5vh;
     background-image: url(../assets/miniAang.webp);
     background-size: cover;
-    
+
 }
 
 
@@ -98,7 +98,7 @@ body {
     justify-content: space-around;
     height: 60vh;
     width: 20vw;
-    
+
 }
 
 .button-data {
@@ -140,7 +140,7 @@ body {
 }
 
 .userBtn:hover {
-   
+
     color: #fff;
     text-shadow:
         -1px -1px 0 #000,
@@ -203,24 +203,21 @@ body {
 .content-name {
     width: 80vw;
     height: 100vh;
-    background-color: #000;
+    background-color: #f2e7e7;
     display: none;
     justify-content: center;
     align-items: top;
-
-
-
-
 }
 
 .trade-name {
     width: 40vw;
     height: 80vh;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #000000;
-
+    background-color: #f2e7e7;
+    gap: 3rem;
 }
 
 .over {
@@ -232,30 +229,141 @@ body {
     background-size: cover;
 
 
-    border-right: 5px solid black;
+    border-right: 5px solid rgb(255, 140, 0);
+}
+
+.nameBox {
+    display: flex;
+    height: 20vh;
+    width: 25rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .inputForm {
     display: flex;
-    height: 80vh;
+    height: 15vh;
     width: 25rem;
     flex-direction: column;
-    justify-content: center;
-
-
-
-
+    align-items: center;
+    justify-content: space-around;
 }
 
+
+
+
 .inputForm input {
+    width: 25rem;
     border: 0;
     border-bottom: 1px solid var(--red);
-    background-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255), rgba(255, 140, 0));
     height: 2rem;
-    color: #fff;
+    color: #000000;
     font-size: 1.3rem;
     text-align: center;
 }
+
+.inputForm input:focus {
+    outline: none;
+    background: linear-gradient(to top, rgba(255, 255, 255), rgba(255, 255, 255), rgba(255, 140, 0));
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+
+.dobraBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vh;
+}
+
+.question {
+    font-size: 1.5rem;
+}
+
+
+.dobraForm {
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+}
+
+
+
+
+.radioDobra {
+    appearance: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    border: 2px solid #000000 !important;
+    outline: none !important;
+    background-color: #fff5f5 !important;
+    cursor: pointer !important;
+    margin-right: 5px !important;
+}
+
+.radioFire:checked {
+    background-color: red !important;
+}
+
+.radioWater:checked {
+    background-color: blue !important;
+}
+
+.radioEarth:checked {
+    background-color: green !important;
+}
+
+.radioAir:checked {
+    background-color: grey !important;
+}
+
+.btn_dobra {
+    background: rgb(255, 140, 0);
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+}
+
+.btn_span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.btn_dobra::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.btn_dobra:hover {
+    color: #fff;
+}
+
+.btn_dobra:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+
+
 
 .first-wall .inputForm input {
     border-bottom: 1px solid rgb(255, 255, 255);
@@ -266,16 +374,9 @@ body {
     font-size: 1.2rem;
 }
 
-.inputForm input:focus {
-    outline: none;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
-    border-bottom: 2px solid rgb(255, 255, 255);
-}
 
-.submit {
-    background-color: #fff;
-    color: #000;
-}
+
+
 
 .content-picture {
     width: 80vw;
@@ -421,6 +522,3 @@ input[type="radio"]:checked {
     transform: scale(0.8);
     cursor: pointer;
 }
-
-
-

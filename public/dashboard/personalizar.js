@@ -1,6 +1,24 @@
 name_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 email_usuario.innerHTML = sessionStorage.EMAIL_USUARIO;
 
+let dobraFav = sessionStorage.DOBRA_USUARIO;
+let corFav = "";
+if (dobraFav == "fogo") {
+  corFav = `rgb(145, 0, 0)`;
+} else if (dobraFav == "agua") {
+  corFav = `rgb(0, 0, 145)`;
+} else if (dobraFav == "terra") {
+  corFav = `rgb(0, 145, 0)`;
+} else if (dobraFav == "ar") {
+  corFav = `rgb(150, 150, 150)`;
+}
+
+function setColor() {
+  var inputs = document.querySelector(".inputForm input");
+  inputs.style.backgroundColor = corFav;
+}
+
+window.addEventListener("load", setColor);
 
 function setProfileImage() {
   var photo_usuario = document.getElementById("photo_usuario");
@@ -20,11 +38,7 @@ function setProfileImage() {
   }
 }
 
-
-window.addEventListener('load', setProfileImage);
-
-
-
+window.addEventListener("load", setProfileImage);
 
 function sair() {
   window.location = "../indexLogado.html";
@@ -66,9 +80,6 @@ function pictureTrade(params) {
   hidePicture();
 }
 
-
-
-
 var id = sessionStorage.ID_USUARIO;
 
 function selectPicture() {
@@ -83,8 +94,8 @@ function selectPicture() {
   }
 
   if (pictureVar === undefined) {
-    alert('Selecione uma foto!');
-    return; 
+    alert("Selecione uma foto!");
+    return;
   }
   sessionStorage.setItem("FOTO_USUARIO", pictureVar);
 
@@ -95,7 +106,7 @@ function selectPicture() {
     },
     body: JSON.stringify({
       pictureServer: pictureVar,
-      idServer: id 
+      idServer: id,
     }),
   })
     .then(function (resposta) {
@@ -118,7 +129,7 @@ function selectName(params) {
   let nomeVar = input_name.value;
 
   if (nomeVar === undefined) {
-    alert('Escreve seu nome novo!');
+    alert("Escreve seu nome novo!");
     return;
   }
   sessionStorage.setItem("NOME_USUARIO", nomeVar);
@@ -129,7 +140,7 @@ function selectName(params) {
     },
     body: JSON.stringify({
       nomeServer: nomeVar,
-      idServer: id 
+      idServer: id,
     }),
   })
     .then(function (resposta) {
