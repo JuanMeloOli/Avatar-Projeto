@@ -1,45 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <title>Seções Horizontais</title>
   <link rel="stylesheet" href="ranking.css">
 </head>
+
 <body>
-  <div class="container">
+  <section class="menu">
+    <div class="user">
+      <div id="photo_usuario" class="photo"></div>
+      <div class="account">
+        <span id="name_usuario">Usuario</span>
+        <span id="email_usuario">Usuário@email.com</span>
+      </div>
+    </div>
+    <div class="btn-user">
+      <a href="dashboard.html" class="button-data userBtn"><span
+          class="material-icons">bar_chart</span><span>Dados</span></a>
+      <a href="forum.html" class="button-style userBtn"><span class="material-icons">forum</span><span>Forum</span></a>
+      <a href="ranking.html" class="button-style userBtn"><span class="miniAang"></span><span
+          class="material-icons pagSelected">emoji_events</span><span class="pagSelected">Ranking</span></a>
+      <a href="personalizar.html" class="button-style userBtn"><span
+          class="material-icons">format_paint</span><span>Personalizar</span></a>
+      <div onclick="sair()" class="button-exit userBtn"><span class="material-icons">logout</span>
+        <span>Sair</span>
+      </div>
+    </div>
+  </section>
+  <section class="container">
     <section class="section" id="section1">
       <button class="btn-left" onclick="prevSection()">◀</button>
       <div class="content">
-        <h2>Seção 1</h2>
-        <!-- Conteúdo da Seção 1 -->
+        <div class="txt-game">
+          <h1 class="big-txt">Agni Kai</h1>
+          <p class="small-txt">Mais Ataques de Fogo</p>
+          <p class="small-txt">(Por Segundo)</p>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop2">
+            <div class="fotoSimbolTop2"></div>
+            <div class="winnerInfoTop2">
+              <span id="name_user2">Usuario</span>
+              <span id="data_user2">6.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop1">
+            <div class="fotoSimbolTop1"></div>
+            <div class="winnerInfoTop1">
+              <span id="name_user1">Usuario</span>
+              <span id="data_user1">7.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop3">
+            <div class="fotoSimbolTop3"></div>
+            <div class="winnerInfoTop3">
+              <span id="name_user3">Usuario</span>
+              <span id="data_user3">5.9</span>
+            </div>
+          </div>
+        </div>
+
       </div>
       <button class="btn-right" onclick="nextSection()">▶</button>
     </section>
     <section class="section" id="section2">
       <button class="btn-left" onclick="prevSection()">◀</button>
       <div class="content">
-        <h2>Seção 2</h2>
+        <div class="txt-game">
+          <h1 class="big-txt">???</h1>
+          <p class="small-txt">?????</p>
+          <p class="small-txt">?</p>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop2">
+            <div class="fotoSimbolTop2"></div>
+            <div class="winnerInfoTop2">
+              <span id="name_user2">Usuario</span>
+              <span id="data_user2">6.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop1">
+            <div class="fotoSimbolTop1"></div>
+            <div class="winnerInfoTop1">
+              <span id="name_user1">Usuario</span>
+              <span id="data_user1">7.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop3">
+            <div class="fotoSimbolTop3"></div>
+            <div class="winnerInfoTop3">
+              <span id="name_user3">Usuario</span>
+              <span id="data_user3">5.9</span>
+            </div>
+          </div>
+        </div>
       </div>
       <button class="btn-right" onclick="nextSection()">▶</button>
     </section>
     <section class="section" id="section3">
       <button class="btn-left" onclick="prevSection()">◀</button>
       <div class="content">
-        <h2>Seção 3</h2>
-        <!-- Conteúdo da Seção 3 -->
+        <div class="txt-game">
+          <h1 class="big-txt">Quiz Água</h1>
+          <p class="small-txt">Mais Acertos</p>
+          <p class="small-txt">(Total)</p>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop2">
+            <div class="fotoSimbolTop2"></div>
+            <div class="winnerInfoTop2">
+              <span id="name_user2">Usuario</span>
+              <span id="data_user2">6.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop1">
+            <div class="fotoSimbolTop1"></div>
+            <div class="winnerInfoTop1">
+              <span id="name_user1">Usuario</span>
+              <span id="data_user1">7.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop3">
+            <div class="fotoSimbolTop3"></div>
+            <div class="winnerInfoTop3">
+              <span id="name_user3">Usuario</span>
+              <span id="data_user3">5.9</span>
+            </div>
+          </div>
+        </div>
       </div>
       <button class="btn-right" onclick="nextSection()">▶</button>
     </section>
     <section class="section" id="section4">
       <button class="btn-left" onclick="prevSection()">◀</button>
       <div class="content">
-        <h2>Seção 4</h2>
-        <!-- Conteúdo da Seção 4 -->
+        <div class="txt-game">
+          <h1 class="big-txt">Toph Game</h1>
+          <p class="small-txt">Mais Acertos</p>
+          <p class="small-txt">(Total)</p>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop2">
+            <div class="fotoSimbolTop2"></div>
+            <div class="winnerInfoTop2">
+              <span id="name_user2">Usuario</span>
+              <span id="data_user2">6.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop1">
+            <div class="fotoSimbolTop1"></div>
+            <div class="winnerInfoTop1">
+              <span id="name_user1">Usuario</span>
+              <span id="data_user1">7.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-top">
+          <div class="fotoWinner"></div>
+          <div class="towerWinnerTop3">
+            <div class="fotoSimbolTop3"></div>
+            <div class="winnerInfoTop3">
+              <span id="name_user3">Usuario</span>
+              <span id="data_user3">5.9</span>
+            </div>
+          </div>
+        </div>
       </div>
       <button class="btn-right" onclick="nextSection()">▶</button>
     </section>
-  </div>
+  </section>
   <script src="ranking.js"></script>
 </body>
+
 </html>
