@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("nav");
   if (window.scrollY > 0) {
@@ -37,7 +30,7 @@ function goAir(params) {
   ) {
     cardLogin.style.display = "flex";
   } else {
-    window.location = "./air-aang.html";
+    window.location = "./air-catch.html";
   }
 }
 
