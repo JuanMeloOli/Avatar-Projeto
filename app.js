@@ -15,10 +15,12 @@ var HOST_APP = process.env.APP_HOST;
 
 var app = express();
 
-var gamesRouter = require("./src/routes/games");
-var forumDashRouter = require("./src/routes/forumDash");
-var dashboardRouter = require("./src/routes/dashboard");
 var usuarioRouter = require("./src/routes/usuarios");
+var gamesRouter = require("./src/routes/games");
+var dashboardRouter = require("./src/routes/dashboard");
+var forumDashRouter = require("./src/routes/forumDash");
+var rankingDashRouter = require("./src/routes/rankingDash");
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -30,6 +32,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/games", gamesRouter);
 app.use("/dashboard", dashboardRouter);
 app.use("/forumDash", forumDashRouter);
+app.use("/rankingDash", rankingDashRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`
