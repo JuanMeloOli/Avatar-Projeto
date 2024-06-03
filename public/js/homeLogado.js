@@ -56,7 +56,7 @@ window.addEventListener("scroll", function () {
     ) {
       cardLogin.style.display = "flex";
     } else {
-      window.location = "./air-aang.html";
+      window.location = "./air-catch.html";
     }
   }
   

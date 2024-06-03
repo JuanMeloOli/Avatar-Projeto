@@ -125,6 +125,7 @@ function iniciar() {
     cpu.style.display = "block";
   }
 }
+let id = sessionStorage.ID_USUARIO;
 function contar() {
   contCPU++;
   atack_cpu.innerHTML = `Ataques de Fogo: ${contCPU}`;
@@ -143,7 +144,7 @@ function contar() {
 
     let clicksPorSegundo = clickCount/(contador-3)
       
-    fetch("./agniKai/pontuar", {
+    fetch("./games/agniKai", {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
@@ -197,7 +198,7 @@ function incrementarContador(params) {
 
 
 
-let id = sessionStorage.ID_USUARIO;
+
 
 
 function gamestart(params) {
@@ -225,7 +226,7 @@ function gamestart(params) {
 
       let clicksPorSegundo = clickCount/(contador-3)
       
-      fetch("./agniKai/pontuar", {
+      fetch("./games/agniKai", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -28,7 +28,9 @@ function displayNextQuestion(params) {
   }
 
   questionText.textContent = questions[currentQuestionIndex].question;
+
   questions[currentQuestionIndex].answers.forEach((answers) => {
+
     const newAnswer = document.createElement("button");
     newAnswer.classList.add("button", "answer");
     newAnswer.textContent = answers.text;
@@ -73,6 +75,8 @@ function selectAnswer(event) {
   currentQuestionIndex++;
 }
 
+let id = sessionStorage.ID_USUARIO;
+
 function finishGame(params) {
   const totalQuestion = questions.length;
   const performance = Math.floor((totalCorrect * 100) / totalQuestion);
@@ -100,6 +104,48 @@ function finishGame(params) {
   <span>Resultado: ${message}</span>
     </p>
 <button onclick=window.location.reload()>Refazer Teste</button>`;
+
+
+
+
+fetch("./games/waterQuiz", {
+  method: "POST",
+  headers: {
+      "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    corretasServer: totalCorrect,
+    idServer: id
+
+})
+}).then(function (resposta) {
+  console.log("ESTOU NO THEN DO pontuar()!")
+
+  if (resposta.ok) {
+      console.log(resposta);
+      
+     
+
+      resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+          
+        
+          setTimeout(function () {
+             reiniciar();
+          }, 1000); 
+      });
+
+  } else {
+
+      console.log("Houve um erro ao tentar realizar o pontuar!");
+
+      
+  }
+
+}).catch(function (erro) {
+  console.log(erro);
+})
 }
 
 const questions = [

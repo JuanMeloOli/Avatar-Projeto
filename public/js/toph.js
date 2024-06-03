@@ -95,7 +95,7 @@ function escolherLado(ladoEscolhido, ladoSorteado) {
    
 
 
-       fetch("./tophGame/pontuar", {
+       fetch("./games/tophGame", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

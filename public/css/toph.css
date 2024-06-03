@@ -29,6 +29,7 @@ html {
     padding: 0 2rem;
     border-radius: 1rem;
     text-decoration: none;
+    z-index: 2;
 }
 
 .exit-button:hover {

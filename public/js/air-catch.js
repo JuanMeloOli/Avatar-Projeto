@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let tempo = 30;
 
   function getRandomPosition() {
-    const x = Math.floor(Math.random() * (gameArea.clientWidth - 130));
-    const y = Math.floor(Math.random() * (gameArea.clientHeight - 130));
+    const x = Math.floor(Math.random() * (gameArea.clientWidth - 145));
+    const y = Math.floor(Math.random() * (gameArea.clientHeight - 145));
     return { x, y };
   }
 
@@ -50,9 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  let id = sessionStorage.ID_USUARIO;
+  
   function encerrarGame(params) {
     gameArea.classList.remove("shake");
     contentClock.style.display = "none";
+    pontuacao.style.display = "none";
     if (score <= 15) {
       contentPonto.innerHTML = `Treine Mais!<br> Você alcançou Aang ${score} vezes.`;
     } else if (score <= 25) {
@@ -69,9 +72,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contentPonto.style.display = "flex";
     mole.remove();
+
+    fetch("./games/catchGame", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        scoreServer: score,
+        idServer: id
+
+    })
+  }).then(function (resposta) {
+      console.log("ESTOU NO THEN DO pontuar()!")
+  
+      if (resposta.ok) {
+          console.log(resposta);
+          
+         
+  
+          resposta.json().then(json => {
+              console.log(json);
+              console.log(JSON.stringify(json));
+              
+            
+              setTimeout(function () {
+                 reiniciar();
+              }, 1000); // apenas para exibir o loading
+          });
+  
+      } else {
+  
+          console.log("Houve um erro ao tentar realizar o pontuar!");
+  
+          
+      }
+  
+  }).catch(function (erro) {
+      console.log(erro);
+  })
+    
+
+
     setTimeout(function () {
       window.location = "air-catch.html";
-    }, 2000);
+    }, 2500);
   }
 
   function start(params) {
