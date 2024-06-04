@@ -473,6 +473,9 @@ nav a:hover {
     transform: translate(0, 0);
     border-bottom: 2px solid rgb(148, 148, 148);
 }
+.go:hover{
+    cursor: pointer;
+}
 
 
 
