@@ -32,8 +32,8 @@
         'opsz' 24
 }
 
-body{
-    overflow-x: hidden ;
+body {
+    overflow-x: hidden;
     display: flex;
     background-color: #000;
 }
@@ -44,7 +44,7 @@ body{
     height: 100vh;
     background-color: rgb(255, 140, 0);
     border-right: #000 5px solid;
-    
+
 }
 
 .user {
@@ -81,11 +81,11 @@ body{
     gap: 0.5rem;
 }
 
-a{
+a {
     color: #000;
 }
 
-.pagSelected{
+.pagSelected {
     color: #fff;
     text-shadow:
         -1px -1px 0 #000,
@@ -95,7 +95,7 @@ a{
 }
 
 
-.miniAang{
+.miniAang {
     position: absolute;
     margin-left: 2rem;
     left: 0;
@@ -103,7 +103,7 @@ a{
     width: 5vh;
     background-image: url(../assets/miniAang.webp);
     background-size: cover;
-    
+
 }
 
 .btn-user {
@@ -179,8 +179,8 @@ a{
     margin-left: 20vw;
     min-height: 100vh;
     width: 80vw;
-    height:fit-content;
-    
+    height: fit-content;
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -196,11 +196,11 @@ a{
     background-color: rgb(255, 255, 255);
 }
 
-#container_msg_others{
+#container_msg_others {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     min-height: 70vh;
     height: fit-content;
     width: 45vw;
@@ -221,10 +221,10 @@ a{
     display: flex;
     align-items: center;
     flex-direction: column;
- 
+
 }
 
-.usersMsg{
+.usersMsg {
     margin-top: 4rem;
 }
 
@@ -295,7 +295,7 @@ a{
     display: flex;
     justify-content: start;
     align-items: start;
-    
+
     line-height: 3vh;
     font-family: monospace;
     font-size: 1rem;
@@ -327,7 +327,7 @@ a{
     justify-content: end;
 }
 
-.content-day{
+.content-day {
     display: flex;
     height: 3vh;
     width: 55%;
