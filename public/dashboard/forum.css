@@ -42,7 +42,13 @@ body {
     position: fixed;
     width: 20vw;
     height: 100vh;
-    background-color: rgb(255, 140, 0);
+    background: linear-gradient(
+    to bottom,
+    rgb(200, 0, 0),
+    rgb(70, 70, 70),
+    rgb(0, 0, 200),
+    rgb(0,200, 0)
+);
     border-right: #000 5px solid;
 
 }
@@ -50,7 +56,6 @@ body {
 .user {
     height: 40vh;
     width: 20vw;
-    background-color: rgb(255, 140, 0);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -79,6 +84,13 @@ body {
     height: 10vh;
     padding: 2vh;
     gap: 0.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 a {
@@ -192,8 +204,13 @@ a {
     justify-content: center;
     align-items: center;
     height: 30vh;
-    width: 80vw;
-    background-color: rgb(255, 255, 255);
+    width: 45vw;
+    background-image: url(../assets/wallElementsTeste.jpg);
+    background-size: 100% auto;
+    background-position: bottom;
+    border-left: 5px solid rgb(255, 140, 0);
+    border-right: 5px solid rgb(255, 140, 0);
+    border-bottom: 2px solid black;
 }
 
 #container_msg_others {
@@ -355,4 +372,8 @@ a {
 
 .btn-msg:hover {
     color: #000;
+}
+
+.txtNameUsuario{
+    text-align: center;
 }

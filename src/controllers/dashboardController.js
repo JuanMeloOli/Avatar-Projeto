@@ -36,7 +36,46 @@ function kpiEarth(req, res) {
     });
 }
 
+
+function kpiAir(req, res) {
+  var id = req.body.idServer;
+   if (id === undefined) {
+    console.log("Seu ID está undefined!");
+    return res.status(400).send("Seu ID está undefined!");
+  }
+
+  dashboardModel.kpiAir(id)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao realizar o select (id) TophGame! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
+function kpiWater(req, res) {
+  var id = req.body.idServer;
+   if (id === undefined) {
+    console.log("Seu ID está undefined!");
+    return res.status(400).send("Seu ID está undefined!");
+  }
+
+  dashboardModel.kpiWater(id)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao realizar o select (id) TophGame! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
 module.exports = {
     kpiFire,
-    kpiEarth
+    kpiEarth,
+    kpiAir,
+    kpiWater
   };

@@ -51,11 +51,26 @@ const contentName = document.querySelector(".content-name");
 const contentPicture = document.querySelector(".content-picture");
 const exit1 = document.querySelector(".exit-personal");
 const exit2 = document.querySelector(".exit-personal_2");
+const exitAccont = document.querySelector(".exitAccount");
 
 tradeName.addEventListener("click", nameTrade);
 tradePicture.addEventListener("click", pictureTrade);
 exit1.addEventListener("click", exit);
 exit2.addEventListener("click", exit);
+exitAccont.addEventListener("click", confirmExit);
+
+function confirmExit(params) {
+  cardLogin.style.display = "flex"
+}
+
+function closeExit(params) {
+  cardLogin.style.display = "none"
+}
+
+function accountExit(params) {
+  sessionStorage.clear()
+  window.location = "/index.html";
+}
 
 function hideName(params) {
   personal.style.display = "none";

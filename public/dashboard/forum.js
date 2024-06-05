@@ -164,7 +164,7 @@ fetch(`/forumDash/obterTodasMsgs`, {
                 <div class="content-high-msg">
                     <div class="usuario-msg">
                         <div class="foto_msg"></div>
-                        <div>${mensagem.nome}</div>
+                        <div class="txtNameUsuario">${mensagem.nome}</div>
                     </div>
                     <div class="msg-usuario">
                     <textarea id="idForum_${idforum}" class="txt-usuario" disabled maxlength="240">${mensagem.mensagem}</textarea>
@@ -188,7 +188,7 @@ fetch(`/forumDash/obterTodasMsgs`, {
                 <div class="content-high-msg">
                     <div class="usuario-msg">
                         <div class="foto_msg"></div>
-                        <div>${mensagem.nome}</div>
+                        <div class="txtNameUsuario">${mensagem.nome}</div>
                     </div>
                     <div class="msg-usuario">
                     <textarea class="txt-usuario" disabled maxlength="240">${mensagem.mensagem}</textarea>

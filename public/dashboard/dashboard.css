@@ -30,7 +30,13 @@ body {
     position: fixed;
     width: 20vw;
     height: 100vh;
-    background-color: rgb(255, 140, 0);
+    background: linear-gradient(
+    to bottom,
+    rgb(200, 0, 0),
+    rgb(70, 70, 70),
+    rgb(0, 0, 200),
+    rgb(0,200, 0)
+);
     border-right: #000 5px solid;
 
 }
@@ -38,7 +44,6 @@ body {
 .user {
     height: 40vh;
     width: 20vw;
-    background-color: rgb(255, 140, 0);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -67,6 +72,13 @@ body {
     height: 10vh;
     padding: 2vh;
     gap: 0.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .miniAang {
@@ -187,7 +199,7 @@ body {
     text-align: center;
     height: 10vh;
     line-height: 5vh;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     border-bottom: 2px solid black;
     color: #fff;
     text-shadow:
@@ -229,28 +241,28 @@ body {
 .kpi-fire {
     width: 29.5vw;
     height: 48.5vh;
-    border: 1px solid black;
+    border: 0.5rem solid black;
     background-color: rgb(255, 0, 0);
 }
 
 .kpi-earth {
     width: 29.5vw;
     height: 48.5vh;
-    border: 1px solid black;
+    border: 0.5rem solid black;
     background-color: rgb(0, 128, 0);
 }
 
 .kpi-air {
     width: 29.5vw;
     height: 48.5vh;
-    border: 1px solid black;
+    border: 0.5rem solid black;
     background-color: rgb(100, 100, 100);
 }
 
 .kpi-water {
     width: 29.5vw;
     height: 48.5vh;
-    border: 1px solid black;
+    border: 0.5rem solid black;
     background-color: rgb(0, 0, 140);
 }
 

@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const card = document.getElementById("card");
   const mole = document.createElement("div");
   const flyAang = document.getElementById("flyAang");
+  let first = true
   let score = 0;
   let tempo = 30;
 
@@ -46,7 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const tempoFormatado = tempo < 10 ? `00:0${tempo}` : `00:${tempo}`;
     timer.textContent = tempoFormatado;
     if (tempo <= 0) {
-      encerrarGame();
+      if (first == true) {
+        first = false
+        encerrarGame();
+      }
     }
   }
 
@@ -94,11 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
           resposta.json().then(json => {
               console.log(json);
               console.log(JSON.stringify(json));
-              
-            
               setTimeout(function () {
-                 reiniciar();
-              }, 1000); // apenas para exibir o loading
+                window.location = "air-catch.html";
+              }, 2500);
+          
           });
   
       } else {
@@ -112,11 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(erro);
   })
     
-
-
-    setTimeout(function () {
-      window.location = "air-catch.html";
-    }, 2500);
   }
 
   function start(params) {
