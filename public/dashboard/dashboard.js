@@ -1,32 +1,7 @@
 var id = sessionStorage.ID_USUARIO;
 const dobra = document.getElementById("dobraChart");
 
-new Chart(dobra, {
-  type: "doughnut",
-  data: {
-    labels: ["Fogo", "Ar", "Água", "Terra"],
-    datasets: [
-      {
-        label: "Quantidade de Votos",
-        data: [34, 19, 12, 9],
-        borderWidth: 1,
-        backgroundColor: [
-          "red", // Fogo
-          "grey", // Ar
-          "blue", // Água
-          "green", // Terra
-        ],
-      },
-    ],
-  },
-  options: {
-    plugins: {
-      legend: {
-        display: false, // Oculta a legenda
-      },
-    },
-  },
-});
+
 
 
 
@@ -173,6 +148,129 @@ fetch(`/dashboard/kpiWater`, {
               kpiQuiz.innerHTML = valorQuiz;
           })
 });
+
+let votosFogo = 0
+let votosAr = 0
+let votosAgua = 0
+let votosTerra = 0
+
+  fetch(`/dashboard/obterVotosFogo`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(function (resposta) {
+    console.log("ESTOU NO THEN DO obterTodasMsgs()!")
+  
+    if (resposta.ok) {
+      console.log(resposta);
+      resposta.json().then(json => {
+        console.log(json);
+        console.log(JSON.stringify(json));
+        votosFogo = json[0].votoFire
+      });
+    } else {
+      console.log("Houve um erro ao tentar realizar a requisição!");
+    }
+  });
+  
+  fetch(`/dashboard/obterVotosAr`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(function (resposta) {
+    console.log("ESTOU NO THEN DO obterTodasMsgs()!")
+  
+    if (resposta.ok) {
+      console.log(resposta);
+      resposta.json().then(json => {
+        console.log(json);
+        console.log(JSON.stringify(json));
+        votosAr = json[0].votoAir
+      });
+    } else {
+      console.log("Houve um erro ao tentar realizar a requisição!");
+    }
+  });
+  
+  fetch(`/dashboard/obterVotosAgua`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(function (resposta) {
+    console.log("ESTOU NO THEN DO obterTodasMsgs()!")
+  
+    if (resposta.ok) {
+      console.log(resposta);
+      resposta.json().then(json => {
+        console.log(json);
+        console.log(JSON.stringify(json));
+        votosAgua = json[0].votoWater
+      });
+    } else {
+      console.log("Houve um erro ao tentar realizar a requisição!");
+    }
+  });
+  
+  fetch(`/dashboard/obterVotosTerra`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(function (resposta) {
+    console.log("ESTOU NO THEN DO obterTodasMsgs()!")
+  
+    if (resposta.ok) {
+      console.log(resposta);
+      resposta.json().then(json => {
+        console.log(json);
+        console.log(JSON.stringify(json));
+        votosTerra = json[0].votoEarth
+        grafico()
+      });
+    } else {
+      console.log("Houve um erro ao tentar realizar a requisição!");
+    }
+  });
+  
+  
+
+
+
+
+function grafico(params) {
+  new Chart(dobra, {
+    type: "doughnut",
+    data: {
+      labels: ["Fogo", "Ar", "Água", "Terra"],
+      datasets: [
+        {
+          label: "Quantidade de Votos",
+          data: [votosFogo, votosAr, votosAgua, votosTerra],
+          borderWidth: 1,
+          backgroundColor: [
+            "red", // Fogo
+            "grey", // Ar
+            "blue", // Água
+            "green", // Terra
+          ],
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false, // Oculta a legenda
+        },
+      },
+    },
+  });
+}
+  
+
+
 
 
 

@@ -33,9 +33,54 @@ function kpiAir(id) {
 
 
 
+function obterVotosFogo() {
+    var instrucaoSql =`
+    SELECT count(favDobra) as votoFire from usuario where favDobra = "fogo"
+
+`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function obterVotosAr() {
+    var instrucaoSql =`
+    SELECT count(favDobra) as votoAir from usuario where favDobra = "ar";
+
+`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function obterVotosAgua() {
+    var instrucaoSql =`
+    SELECT count(favDobra) as votoWater from usuario where favDobra = "agua";
+
+`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function obterVotosTerra() {
+    var instrucaoSql =`
+    SELECT count(favDobra) as votoEarth from usuario where favDobra = "terra";
+
+`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
 module.exports = {
     kpiFire,
     kpiEarth,
     kpiAir,
-    kpiWater
+    kpiWater,
+    obterVotosFogo,
+    obterVotosAr,
+    obterVotosAgua,
+    obterVotosTerra
   };

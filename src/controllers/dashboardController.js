@@ -73,9 +73,62 @@ function kpiWater(req, res) {
       res.status(500).json(erro.sqlMessage);
     });
 }
+
+function obterVotosFogo(req, res) {
+  dashboardModel.obterVotosFogo()
+    .then(function (mensagens) {
+      res.json(mensagens);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao obter os votos! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function obterVotosAgua(req, res) {
+  dashboardModel.obterVotosAgua()
+    .then(function (mensagens) {
+      res.json(mensagens);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao obter os votos! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function obterVotosAr(req, res) {
+  dashboardModel.obterVotosAr()
+    .then(function (mensagens) {
+      res.json(mensagens);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao obter os votos! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function obterVotosTerra(req,res) {
+  dashboardModel.obterVotosTerra()
+    .then(function (mensagens) {
+      res.json(mensagens);
+    })
+    .catch(function (erro) {
+      console.error(erro);
+      console.error("Houve um erro ao obter os votos! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
     kpiFire,
     kpiEarth,
     kpiAir,
-    kpiWater
+    kpiWater,
+    obterVotosFogo,
+    obterVotosAgua,
+    obterVotosAr,
+    obterVotosTerra
   };

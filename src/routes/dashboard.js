@@ -19,6 +19,22 @@ router.post("/kpiWater", function (req, res) {
     dashboardController.kpiWater(req, res);
 })
 
+router.get("/obterVotosFogo", function (req, res) {
+    dashboardController.obterVotosFogo(req, res);
+})
+
+router.get("/obterVotosAr", function (req, res) {
+    dashboardController.obterVotosAr(req, res);
+})
+
+router.get("/obterVotosAgua", function (req, res) {
+    dashboardController.obterVotosAgua(req, res);
+})
+
+router.get("/obterVotosTerra", function (req, res) {
+    dashboardController.obterVotosTerra(req, res);
+})
+
 
 
 
