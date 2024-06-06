@@ -283,7 +283,7 @@
     justify-content: center;
     align-items: end;
     font-size: 4rem;
-    color: #fff;
+    color: aqua;
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
@@ -313,10 +313,14 @@
     width: 40vw;
     background-color: aqua;
     border: 0.5rem solid #000;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
-    padding: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1.6rem;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 45%;
 }
+
 
 .right-explanation {
     display: flex;
@@ -327,10 +331,18 @@
 }
 
 .img-explanation {
+    border-top-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+    border: #000 solid 1rem;
     height: 70vh;
     width: 40vw;
-    background-image: url(../assets/Aang+appa.jpg);
+    background-size: cover;
+    background-image: url(../assets/zukoAndIroh.jpeg);
+    background-position: center;
+    transition: 0.8s ease-in-out;
 }
+
+
 
 .content-themes {
     display: flex;
@@ -513,3 +525,4 @@
 .txt-box8 {
     background-color: rgb(153, 183, 79);
 }
+
