@@ -1,5 +1,4 @@
 function home(params) {
-  console.log(email)
   setTimeout(function () {
     window.location = "index.html";
   }, 300);
@@ -137,13 +136,13 @@ function home(params) {
     
     return false;
     }
-    var email = json.email
-    console.log(email)
   function cadastrar() {
-    validarEmail()
-    validarSenha()
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
+    var emailValido = validarEmail();
+    var senhaValida = validarSenha();
+    if (!emailValido || !senhaValida) {
+      return false;
+  }
+
     var nomeVar = input_name.value;
     var emailVar = input_email.value;
     var senhaVar = input_password.value;
@@ -176,15 +175,12 @@ function home(params) {
       return false;
     }
   
-    // Enviando o valor da nova input
     fetch("./usuarios/cadastrar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,

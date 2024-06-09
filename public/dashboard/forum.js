@@ -55,8 +55,8 @@ if (sessionStorage.FOTO_USUARIO == "0") {
   photo_msg.style.backgroundImage = "url(../assets/kataraIcon.jpg)";
   photo_msg_.style.backgroundImage = "url(../assets/kataraIcon.jpg)";
 } else if (sessionStorage.FOTO_USUARIO == "3") {
-  photo_msg.style.backgroundImage = "url(../assets/sokkaIcon.jpg)";
-  photo_msg_.style.backgroundImage = "url(../assets/sokkaIcon.jpg)";
+  photo_msg.style.backgroundImage = "url(../assets/sokkaPerfilIcon.jpg)";
+  photo_msg_.style.backgroundImage = "url(../assets/sokkaPerfilIcon.jpg)";
 } else if (sessionStorage.FOTO_USUARIO == "4") {
   photo_msg.style.backgroundImage = "url(../assets/TophIcon.jpg)";
   photo_msg_.style.backgroundImage = "url(../assets/TophIcon.jpg)";
@@ -112,9 +112,7 @@ function enviarForum(params) {
         resposta.json().then(json => {
             console.log(json);
             console.log(JSON.stringify(json));
-            setTimeout(function () {
               window.location = "forum.html";
-            }, 1000);
 
              
         });
@@ -239,7 +237,7 @@ fetch(`/forumDash/obterTodasMsgs`, {
               fotoMsg.style.backgroundImage = "url(../assets/kataraIcon.jpg)";
               break;
           case "3":
-              fotoMsg.style.backgroundImage = "url(../assets/sokkaIcon.jpg)";
+              fotoMsg.style.backgroundImage = "url(../assets/sokkaPerfilIcon.jpg)";
               break;
           case "4":
               fotoMsg.style.backgroundImage = "url(../assets/TophIcon.jpg)";
@@ -326,9 +324,7 @@ function deletarForum(idForum) {
         resposta.json().then(json => {
             console.log(json);
             console.log(JSON.stringify(json));
-            setTimeout(function () {
               window.location = "forum.html";
-            }, 1000);
 
              
         });
@@ -370,9 +366,8 @@ function atualizarForum(idForum) {
         resposta.json().then(json => {
             console.log(json);
             console.log(JSON.stringify(json));
-            setTimeout(function () {
+
               window.location = "forum.html";
-            }, 1000);
 
              
         });
@@ -380,8 +375,6 @@ function atualizarForum(idForum) {
     } else {
 
         console.log("Houve um erro ao tentar realizar o enviarForum!");
-
-        
     }
   
 })

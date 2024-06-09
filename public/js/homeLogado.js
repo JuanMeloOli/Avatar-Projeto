@@ -12,7 +12,7 @@ function setProfileImage() {
   } else if (sessionStorage.FOTO_USUARIO == "2") {
     photo_usuario.style.backgroundImage = "url(../assets/kataraIcon.jpg)";
   } else if (sessionStorage.FOTO_USUARIO == "3") {
-    photo_usuario.style.backgroundImage = "url(../assets/sokkaIcon.jpg)";
+    photo_usuario.style.backgroundImage = "url(../assets/sokkaPerfilIcon.jpg)";
   } else if (sessionStorage.FOTO_USUARIO == "4") {
     photo_usuario.style.backgroundImage = "url(../assets/TophIcon.jpg)";
   } else if (sessionStorage.FOTO_USUARIO == "5") {

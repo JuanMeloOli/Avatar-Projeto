@@ -20,7 +20,7 @@ function setProfileImage() {
   } else if (sessionStorage.FOTO_USUARIO == "2") {
     photo_usuario.style.backgroundImage = "url(../assets/kataraIcon.jpg)";
   } else if (sessionStorage.FOTO_USUARIO == "3") {
-    photo_usuario.style.backgroundImage = "url(../assets/sokkaIcon.jpg)";
+    photo_usuario.style.backgroundImage = "url(../assets/sokkaPerfilIcon.jpg)";
   } else if (sessionStorage.FOTO_USUARIO == "4") {
     photo_usuario.style.backgroundImage = "url(../assets/TophIcon.jpg)";
   } else if (sessionStorage.FOTO_USUARIO == "5") {
@@ -149,10 +149,10 @@ fetch(`/dashboard/kpiWater`, {
           })
 });
 
-let votosFogo = 0
-let votosAr = 0
-let votosAgua = 0
-let votosTerra = 0
+let votosFogo = 5
+let votosAr = 5
+let votosAgua = 5
+let votosTerra = 5
 
   fetch(`/dashboard/obterVotosFogo`, {
     method: "GET",
@@ -251,10 +251,10 @@ function grafico(params) {
           data: [votosFogo, votosAr, votosAgua, votosTerra],
           borderWidth: 1,
           backgroundColor: [
-            "red", // Fogo
-            "grey", // Ar
-            "blue", // Água
-            "green", // Terra
+            "red", 
+            "grey", 
+            "blue", 
+            "green", 
           ],
         },
       ],
