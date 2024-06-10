@@ -7,43 +7,43 @@ const container = document.querySelector(".container");
 const exitButton = document.querySelector(".exit-button");
 
 startGameButton.addEventListener("click", startGame);
-nextQuestionButton.addEventListener("click", displayNextQuestion);
+nextQuestionButton.addEventListener("click", exibirProximaPergunta);
 
-let currentQuestionIndex = 0;
-let totalCorrect = 0;
+let indiceAtualDaPergunta = 0;
+let totalCorretas = 0;
 
 function startGame(params) {
   startGameButton.classList.add("hide");
   questionsContainer.classList.remove("hide");
   exitButton.classList.add("hide");
 
-  displayNextQuestion();
+  exibirProximaPergunta();
 }
 
-function displayNextQuestion(params) {
-  resetState();
+function exibirProximaPergunta(params) {
+  resetarEstado();
 
-  if (questions.length == currentQuestionIndex) {
-    return finishGame();
+  if (questions.length == indiceAtualDaPergunta) {
+    return finalizarJogo();
   }
 
-  questionText.textContent = questions[currentQuestionIndex].question;
+  questionText.textContent = questions[indiceAtualDaPergunta].question;
 
-  questions[currentQuestionIndex].answers.forEach((answers) => {
+  questions[indiceAtualDaPergunta].answers.forEach((answers) => {
 
-    const newAnswer = document.createElement("button");
-    newAnswer.classList.add("button", "answer");
-    newAnswer.textContent = answers.text;
+    const novaResposta = document.createElement("button");
+    novaResposta.classList.add("button", "answer");
+    novaResposta.textContent = answers.text;
     if (answers.correct) {
-      newAnswer.dataset.correct = answers.correct;
+      novaResposta.dataset.correct = answers.correct;
     }
-    answersContainer.appendChild(newAnswer);
+    answersContainer.appendChild(novaResposta);
 
-    newAnswer.addEventListener("click", selectAnswer);
+    novaResposta.addEventListener("click", selectAnswer);
   });
 }
 
-function resetState(params) {
+function resetarEstado(params) {
   while (answersContainer.firstChild) {
     answersContainer.removeChild(answersContainer.firstChild);
   }
@@ -57,7 +57,7 @@ function selectAnswer(event) {
 
   if (answerClicked.dataset.correct) {
     document.body.classList.add("correct");
-    totalCorrect++;
+    totalCorretas++;
   } else {
     document.body.classList.add("incorrect");
   }
@@ -72,14 +72,14 @@ function selectAnswer(event) {
     button.disabled = true;
   });
   nextQuestionButton.classList.remove("hide");
-  currentQuestionIndex++;
+  indiceAtualDaPergunta++;
 }
 
 let id = sessionStorage.ID_USUARIO;
 
-function finishGame(params) {
+function  finalizarJogo(params) {
   const totalQuestion = questions.length;
-  const performance = Math.floor((totalCorrect * 100) / totalQuestion);
+  const performance = Math.floor((totalCorretas * 100) / totalQuestion);
 
   let message = "";
 
@@ -100,7 +100,7 @@ function finishGame(params) {
 
   questionsContainer.innerHTML = `
   <p>
-   Você acertou ${totalCorrect} de ${totalQuestion} questões!
+   Você acertou ${totalCorretas} de ${totalQuestion} questões!
   <span>Resultado: ${message}</span>
     </p>
 <button onclick=window.location.reload()>Refazer Teste</button>`;
@@ -114,7 +114,7 @@ fetch("./games/waterQuiz", {
       "Content-Type": "application/json"
   },
   body: JSON.stringify({
-    corretasServer: totalCorrect,
+    corretasServer: totalCorretas,
     idServer: id
 
 })
