@@ -21,23 +21,18 @@ CREATE TABLE usuario (
     fotoPerfil char(1)
 );
 
-select * from usuario;
-select * from usuario;
 
+describe usuario;
 
 create table games (
 idGames int primary key auto_increment,
+catchGame int,
 Tophgame int,
 AgniKai float,
+quiz int,
 fkUsuario int,
 constraint fkUsuarioGames foreign key (fkUsuario) references usuario(idUsuario));
 
-
-
-create table quiz(
-idQuiz int primary key auto_increment,
-acertos int 
-);
 
 create table forum(
 idForum int primary key auto_increment,
@@ -48,11 +43,10 @@ constraint fkUsuarioForum foreign key (fkUsuario) references usuario(idUsuario))
 
 
 
-select * from forum;
-
-
-describe usuario;
-    
+select * from usuario;
+delete from usuario where idUsuario = 66;
+delete from forum where fkUsuario = 66;
+delete from games where fkUsuario = 66;    
     
 
 

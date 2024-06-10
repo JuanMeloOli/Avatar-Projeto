@@ -5,9 +5,17 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: "Prata", serif;
+   
 
 
 }
+body{
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+
+
 
 
 ::-webkit-scrollbar {
@@ -30,11 +38,23 @@
 :root {
     --red: rgb(190, 0, 0);
 }
+h1{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+p{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+button{
+    overflow: hidden; 
+}
 
 
 .home {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 .background-home {
@@ -318,9 +338,10 @@ nav a:hover {
     text-align: center;
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     animation: bordertxt infinite 5s;
     animation-direction: alternate;
+   
 }
 
 @keyframes bordertxt {
@@ -433,7 +454,7 @@ nav a:hover {
 }
 
 .txt h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     color: aliceblue;
     text-shadow:
@@ -495,6 +516,8 @@ nav a:hover {
     width: 100vw;
 
     display: flex;
+    
+  
 }
 
 .aang-air {
@@ -761,6 +784,16 @@ nav a:hover {
     overflow: hidden;
 }
 
+footer{
+    height: 5vh;
+    width: 100vw;
+    background-color: #000;
+    border: 2px solid white;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: smaller;
+}
 
 
     

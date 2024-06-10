@@ -273,19 +273,20 @@
 }
 
 .themes {
-    height: 300vh;
+    height: 280vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
 }
 
 .high-themes {
-    height: 10vh;
+    font-family: "Josefin Sans", sans-serif;
+    height: 12vh;
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     font-size: 4rem;
-    color: aqua;
+    color: rgb(255, 255, 255);
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
@@ -354,6 +355,7 @@
 }
 
 .mid-txt {
+    font-family: "Josefin Sans", sans-serif;
     height: 20vh;
     width: 100vw;
     display: flex;
@@ -433,6 +435,7 @@
     width: 20vw;
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
 }
 
 .title-box {
@@ -442,44 +445,18 @@
     line-height: 10vh;
     font-size: 1.5rem;
     text-align: center;
-    color: #fff;
-    text-shadow:
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        2px 2px 0 #000;
 }
 
+
+
 .title-box1 {
-    background-color: #ff4500;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
 }
 
 .title-box2 {
-    background-color: #7fffd4;
-}
-
-.title-box3 {
-    background-color: rgb(110, 0, 0);
-}
-
-.title-box4 {
-    background-color: rgb(0, 0, 0);
-}
-
-.title-box5 {
-    background-color: rgb(117, 0, 31);
-}
-
-.title-box6 {
-    background-color: rgb(0, 91, 91);
-}
-
-.title-box7 {
-    background-color: rgb(230, 230, 0);
-}
-
-.title-box8 {
-    background-color: rgb(127, 174, 8);
+    background-color: rgb(255, 255, 255);
+    color: #000;
 }
 
 
@@ -497,34 +474,43 @@
 }
 
 .txt-box1 {
-    background-color: #ff8559;
+    background-color: rgb(255, 255, 255);
 }
 
 .txt-box2 {
-    background-color: rgb(165, 252, 223);
+    background-color: rgb(0, 0, 0);
+    color: #fff;
 }
 
-.txt-box3 {
-    background-color: rgb(254, 74, 74);
+
+footer{
+    height: 5vh;
+    width: 100vw;
+    background-color: #000;
+    border: 2px solid white;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: smaller;;
 }
 
-.txt-box4 {
-    background-color: rgb(144, 144, 144);
+h1{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
-.txt-box5 {
-    background-color: rgb(155, 82, 101);
+span{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+p{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+button{
+    overflow: hidden; 
 }
 
-.txt-box6 {
-    background-color: rgb(80, 189, 189);
-}
 
-.txt-box7 {
-    background-color: rgb(255, 255, 132);
-}
 
-.txt-box8 {
-    background-color: rgb(153, 183, 79);
-}
 

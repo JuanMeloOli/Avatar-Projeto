@@ -70,9 +70,9 @@ function rankingTophGame() {
     usuario.fotoPerfil as foto, 
     SUM(games.tophGame) as valor
 FROM 
-    usuario as Usuario
+    usuario
 JOIN 
-    games as Games ON usuario.idUsuario = games.fkUsuario
+    games ON usuario.idUsuario = games.fkUsuario
 GROUP BY 
     usuario.idUsuario
 ORDER BY 

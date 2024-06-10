@@ -12,7 +12,7 @@
 
 
 a {
-    color: #000;
+    color: #ffffff;
 }
 
 body {
@@ -93,12 +93,12 @@ body {
 }
 
 .pagSelected {
-    color: #fff;
+    color: #000000;
     text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
 }
 
 .btn-user {
@@ -107,6 +107,12 @@ body {
     justify-content: space-around;
     height: 60vh;
     width: 20vw;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .button-data {
